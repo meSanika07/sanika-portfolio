@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanika Kundekar — Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+</head>
+
+<body>
+
+  <!-- =====================================================
+     LOADER
+===================================================== -->
+  <div id="loader">
+    <div class="loader-letters">S · K</div>
+  </div>
+
+  <!-- =====================================================
+     NAVBAR
+===================================================== -->
+  <nav id="navbar">
+    <div class="wrap">
+      <div class="nav-inner">
+
+        <div class="nav-left">
+          <div class="nav-logo">SK</div>
+          <div class="nav-email" id="navEmail">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            sanikakundekar007@gmail.com
+          </div>
+        </div>
+
+        <ul class="nav-center">
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#certs">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-right">
+          <button class="theme-btn" id="themeBtn" aria-label="Toggle theme"></button>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="mobile-nav" id="mobileNav">
+        <a href="#experience" class="ml">Experience</a>
+        <a href="#skills" class="ml">Skills</a>
+        <a href="#education" class="ml">Education</a>
+        <a href="#works" class="ml">Works</a>
+        <a href="#certs" class="ml">Certifications</a>
+        <a href="#contact" class="ml">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =====================================================
+     HERO
+===================================================== -->
+  <section id="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+
+        <!-- Left -->
+        <div>
+          <p class="hero-hi">HI THERE</p>
+
+          <!-- Main Name
+          <h1 class="hero-name">
+            <span>S</span><span>a</span><span>n</span><span>i</span><span>k</span><span>a</span>
+            <span>&nbsp;</span>
+            <span>K</span><span>u</span><span>n</span><span>d</span><span>e</span><span>k</span><span>a</span><span>r</span>
+          </h1> -->
+          <h1 class="hero-name">
+            <span class="name-animate">Sanika Kundekar</span>
+          </h1>
+
+          <!--  Subtitle -->
+          <h2 class="hero-title">Computer Science Undergraduate</h2>
+
+          <!--  Description -->
+          <p class="hero-desc">
+            Transforming ideas into impactful digital solutions with creativity and code.
+            Driven by curiosity to build smart, user-focused applications that make a difference.
+          </p>
+
+          <!-- Actions -->
+          <div class="hero-actions">
+            <a href="assets/Sanika _Kundekar .pdf" class="btn-cv" download>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Download CV ↓
+            </a>
+
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/sanika-kundekar-ab0447274" target="_blank" class="social-icon"
+                title="LinkedIn">in</a>
+
+              <a href="https://github.com/meSanika07" target="_blank" class="social-icon" title="GitHub">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+              </a>
+
+              <a href="https://leetcode.com/u/mesanika_17/" target="_blank" class="social-icon" title="LeetCode"
+                style="font-size:.62rem;">LC</a>
+
+              <a href="mailto:sanikakundekar007@gmail.com" class="social-icon" title="Email">@</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right — Photo (hover to 3D rotate) -->
+        <div class="hero-photo">
+          <div class="photo-rotate-wrap" title="Hover me!">
+            <div class="hero-img-frame">
+              <img src="assets/df50e5d3a4ac4651977404a03c31bcff_doubao-seedream-4-5-251128.png" alt="Sanika Kundekar" />
+              <div class="avatar-svg">
+                <svg viewBox="0 0 80 80" fill="rgba(155,89,232,0.5)">
+                  <circle cx="40" cy="28" r="18" />
+                  <ellipse cx="40" cy="76" rx="30" ry="20" />
+                </svg>
+                <span>Your Photo Here</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- =====================================================
+     EXPERIENCE
+===================================================== -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-center reveal">
+        <span class="sec-label">Work History</span>
+        <h2 class="sec-title">My Experience</h2>
+        <p class="sec-sub">
+          Hands-on industry exposure building real-world products and gaining cloud expertise.
+        </p>
+      </div>
+
+      <!-- Existing Experience -->
+      <div class="exp-card reveal">
+        <div>
+          <div class="exp-role">Frontend Developer Intern (SIP)</div>
+          <div class="exp-company">SORTUS E-WASTE MANAGEMENT</div>
+          <div class="exp-mode">Remote</div>
+          <div class="exp-bullets">
+            <div class="exp-bullet">Developed a responsive e-waste management platform using ReactJS, TypeScript, and
+              Tailwind CSS.</div>
+            <div class="exp-bullet">Converted Figma designs into reusable UI components and implemented routing using
+              React Router.</div>
+            <div class="exp-bullet">Built role-based dashboards for individual, industry, and admin users.</div>
+            <div class="exp-bullet">Collaborated using GitHub and followed best practices for clean, scalable frontend
+              architecture.</div>
+            <div class="exp-bullet">Gained hands-on experience in real-world product development and debugging.</div>
+          </div>
+        </div>
+        <div class="exp-period">June 2025<br />—<br />July 2025</div>
+      </div>
+
+      <div class="exp-card reveal d2">
+        <div>
+          <div class="exp-role">Cloud Virtual Intern</div>
+          <div class="exp-company">AICTE (AWS Academy)</div>
+          <div class="exp-mode">Remote</div>
+
+          <div class="exp-bullets">
+            <div class="exp-bullet">
+              Gained hands-on experience with core AWS services including EC2, S3, RDS, and VPC for cloud infrastructure
+              management.
+            </div>
+            <div class="exp-bullet">
+              Implemented infrastructure automation using AWS CloudFormation to streamline deployment processes.
+            </div>
+            <div class="exp-bullet">
+              Developed understanding of cloud architecture, security practices, and cost optimization strategies.
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-period">Oct 2024<br />—<br />Dec 2024</div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="hr"></div>
+
+  <section id="skills">
+    <div class="wrap">
+
+      <div class="section-center reveal">
+        <span class="sec-label">Expertise</span>
+        <h2 class="sec-title">Technical Skills</h2>
+        <p class="sec-sub" style="margin:0 auto;text-align:center;">
+          Technologies I work with across the full stack.
+        </p>
+      </div>
+      <div class="sk3-list reveal">
+
+        <div class="sk3-row">
+          <span class="sk3-num">01</span>
+          <span class="sk3-title">Web Development</span>
+          <span class="sk3-tags"> HTML &nbsp;·&nbsp; CSS &nbsp;·&nbsp; JavaScript &nbsp;·&nbsp;React.js ·&nbsp; MySQL
+            &nbsp;·&nbsp; MongoDB &nbsp;·&nbsp; Spring Boot &nbsp;·&nbsp; Node.js &nbsp;·&nbsp; REST APIs &nbsp;·&nbsp;
+            WebSocket &nbsp;·&nbsp; </span>
+          <span class="sk3-arrow">↗</span>
+        </div>
+
+        <div class="sk3-row">
+          <span class="sk3-num">02</span>
+          <span class="sk3-title">AI / Machine Learning</span>
+          <span class="sk3-tags">Machine Learning &nbsp;·&nbsp; Random Forest &nbsp;·&nbsp; Gradient Boosting
+            &nbsp;·&nbsp; Linear Regression &nbsp;·&nbsp; EDA &nbsp;·&nbsp; Feature Engineering &nbsp;·&nbsp; Predictive
+            Modeling &nbsp;·&nbsp; Streamlit</span>
+          <span class="sk3-arrow">↗</span>
+        </div>
+
+        <div class="sk3-row">
+          <span class="sk3-num">03</span>
+          <span class="sk3-title">Problem Solving &amp; Tools</span>
+          <span class="sk3-tags">Java &nbsp;·&nbsp; Data Structures & Algorithms &nbsp;·&nbsp; OOP &nbsp;·&nbsp; DBMS
+            &nbsp;·&nbsp; Git / GitHub &nbsp;·&nbsp; Postman &nbsp;·&nbsp; IntelliJ IDEA &nbsp;·&nbsp; VS Code</span>
+          <span class="sk3-arrow">↗</span>
+        </div>
+
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- =====================================================
+     EDUCATION
+===================================================== -->
+  <section id="education">
+    <div class="wrap">
+      <div class="reveal" style="margin-bottom:3.5rem;text-align:center;">
+        <span class="sec-label">Academic Background</span>
+        <h2 class="sec-title">Education</h2>
+      </div>
+
+      <div class="edu-zigzag reveal">
+
+        <!-- Item 1 — LEFT -->
+        <div class="edu-zz-item edu-zz-left">
+          <div class="edu-zz-card">
+            <div class="edu-zz-period">Nov 2022 — June 2026</div>
+            <div class="edu-zz-degree">BTech — Computer Engineering</div>
+            <div class="edu-zz-school">MIT Academy of Engineering, Alandi</div>
+            <div class="edu-zz-detail">CGPA: 9.05 / 10</div>
+          </div>
+          <div class="edu-zz-center">
+            <div class="edu-zz-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+              </svg>
+            </div>
+            <div class="edu-zz-line"></div>
+          </div>
+          <div class="edu-zz-empty"></div>
+        </div>
+
+        <!-- Item 2 — RIGHT -->
+        <div class="edu-zz-item edu-zz-right">
+          <div class="edu-zz-empty"></div>
+          <div class="edu-zz-center">
+            <div class="edu-zz-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+              </svg>
+            </div>
+            <div class="edu-zz-line"></div>
+          </div>
+          <div class="edu-zz-card">
+            <div class="edu-zz-period">2021 — 2022</div>
+            <div class="edu-zz-degree">H.S.C. — Plane Science</div>
+            <div class="edu-zz-school">Dnyansamwardhini Junior College, Satara</div>
+            <div class="edu-zz-detail">Grade: 83.17%</div>
+          </div>
+        </div>
+
+        <!-- Item 3 — LEFT -->
+        <div class="edu-zz-item edu-zz-left">
+          <div class="edu-zz-card">
+            <div class="edu-zz-period">2019 — 2020</div>
+            <div class="edu-zz-degree">S.S.C.</div>
+            <div class="edu-zz-school">Dnyansamwardhini Junior College, Satara</div>
+            <div class="edu-zz-detail">Grade: 95.40%</div>
+          </div>
+          <div class="edu-zz-center">
+            <div class="edu-zz-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+              </svg>
+            </div>
+            <div class="edu-zz-line"></div>
+          </div>
+          <div class="edu-zz-empty"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="hr"></div>
+
+  <div class="works-grid">
+
+    <!-- Card 1 -->
+    <div class="work-card reveal d2">
+      <div class="work-preview">
+        <img src="assets/medical insurance cost prediction.jpg" alt="Insurance ML">
+      </div>
+      <div class="work-body">
+        <div class="work-title">Medical Insurance Cost Prediction</div>
+        <div class="work-desc">
+          Developed a machine learning model to predict medical insurance costs using features like age, BMI, smoking
+          habits, and region. Implemented different models, evaluated using R², MSE, and MAE, and deployed using
+          Streamlit for real-time predictions. </div>
+        <div class="work-tags">
+          <span class="work-tag">Machine Learning</span>
+          <span class="work-tag">Gradient Boosting</span>
+          <span class="work-tag">Random Forest</span>
+          <span class="work-tag">Linear Regression</span>
+          <span class="work-tag">Streamlit</span>
+        </div>
+        <a href="https://github.com/sanika-kundekar" target="_blank" class="btn-check">Check</a>
+      </div>
+    </div>
+
+
+    <!-- Card 2 -->
+    <div class="work-card reveal d2">
+      <div class="work-preview">
+        <img src="assets/cicd.webp" alt="SigmaGPT">
+      </div>
+      <div class="work-body">
+        <div class="work-title">SigmaGPT — AI Chatbot</div>
+        <div class="work-desc">
+          Built and deployed an AI-powered chatbot using ReactJS, Node.js, MongoDB, and OpenAI API. Implemented CI/CD
+          pipelines with GitHub Actions and deployed on AWS EC2 using Docker and Nginx for scalable access.
+        </div>
+        <div class="work-tags">
+          <span class="work-tag">AWS</span>
+          <span class="work-tag">Docker</span>
+          <span class="work-tag">CI/CD</span>
+          <span class="work-tag">OpenAI</span>
+        </div>
+        <!-- <a href="https://github.com/sanika-kundekar" target="_blank" class="btn-check">Check</a> -->
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="work-card reveal d3">
+      <div class="work-preview">
+        <img src="assets/curebuddy.PNG" alt="CureBuddy">
+      </div>
+      <div class="work-body">
+        <div class="work-title">CureBuddy — Appointment System</div>
+        <div class="work-desc">
+          Developed a role-based healthcare web application with OTP-based authentication and advanced doctor search.
+          Designed intuitive dashboards to manage appointments, user profiles, and administrative workflows efficiently.
+        </div>
+        <div class="work-tags">
+          <span class="work-tag">ReactJS</span>
+          <span class="work-tag">Node.js</span>
+          <span class="work-tag">Express</span>
+          <span class="work-tag">Tailwind CSS</span>
+          <span class="work-tag">MongoDB</span>
+          <span class="work-tag">JWT Authentication</span>
+        </div>
+        <a href="https://cure-buddy.vercel.app/" target="_blank" class="btn-check">Check</a>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="work-card reveal d1">
+      <div class="work-preview">
+        <img src="assets/file.png" alt="Encryptor">
+      </div>
+      <div class="work-body">
+        <div class="work-title">File Encryptor / Decryptor</div>
+        <div class="work-desc">
+          Developed a Java-based desktop application for secure file encryption and decryption using XOR and SHA-256.
+          Built a user-friendly Swing GUI with secure file handling and validation.
+        </div>
+        <div class="work-tags">
+          <span class="work-tag">Java</span>
+          <span class="work-tag">Java Swing</span>
+          <span class="work-tag">SHA-256</span>
+          <span class="work-tag">XOR-Encryption</span>
+          <span class="work-tag">NetBeans IDE</span>
+        </div>
+        <a href="https://github.com/meSanika07/File_Encrypt_Decrypt_Tool" target="_blank" class="btn-check">Check</a>
+      </div>
+    </div>
+
+    <div class="work-card reveal d1">
+      <div class="work-preview">
+        <img src="assets/Chatapp.PNG" alt="Chat App">
+      </div>
+      <div class="work-body">
+        <div class="work-title">Real-Time Room-Based Chat App</div>
+        <div class="work-desc">
+          Developed a real-time chat application using Spring Boot, WebSocket, MongoDB, and ReactJS with room-based
+          messaging and low-latency communication. Implemented REST APIs, persistent storage, and a responsive UI with
+          real-time updates. </div>
+        <div class="work-tags">
+          <span class="work-tag">ReactJS</span>
+          <span class="work-tag">Dependency Injection</span>
+          <span class="work-tag">Spring Boot</span>
+          <span class="work-tag">WebSocket</span>
+          <span class="work-tag">STOMP</span>
+          <span class="work-tag">MongoDB</span>
+
+        </div>
+        <!-- <a href="https://github.com/sanika-kundekar" target="_blank" class="btn-check">Check</a> -->
+      </div>
+    </div>
+
+  </div>
+
+  <!-- =====================================================
+     CERTIFICATIONS
+===================================================== -->
+  <section id="certs">
+    <div class="wrap">
+      <div class="section-center reveal">
+        <span class="sec-label">Certificate</span>
+        <h2 class="sec-title">Certificates &amp; Achievements</h2>
+      </div>
+      <div class="certs-grid">
+
+        <div class="cert-card reveal d1">
+          <div class="cert-icon">🟠</div>
+          <div>
+            <div class="cert-title">Postman API Fundamentals Student Expert</div>
+            <div class="cert-issuer">Postman — December 2024</div>
+            <div class="cert-desc">Gained expertise in API fundamentals including GET, POST, PATCH, DELETE requests,
+              query parameters, and API Key Authorization.</div>
+          </div>
+        </div>
+
+        <div class="cert-card reveal d2">
+          <div class="cert-icon">📄</div>
+          <div>
+            <div class="cert-title">
+              Stable Diffusion with LLM Prompt Engineering and CLIP Filtering for Fine-Grained Image Generation
+            </div>
+
+            <div class="cert-issuer">
+              IEEE — ICMNWC 2025 (Dec 2025)
+            </div>
+
+            <div class="cert-desc">
+              Published a research paper proposing a diffusion-based framework combining LLM-driven prompt
+              diversification and CLIP-based filtering to improve fine-grained image generation quality, diversity, and
+              class alignment.
+            </div>
+
+            <div class="cert-desc" style="margin-top:6px; font-size: 0.75rem;">
+              Authors: Ayush Fating, Sanika Kundekar, Kiran Shinde, Sanket Mane, Sharmila Kharat
+            </div>
+
+            <a href="https://ieeexplore.ieee.org/document/11354257" class="btn-check" style="margin-top:10px;">View
+              Paper</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="hr"></div>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-head reveal">
+        <span class="sec-label">Get In Touch</span>
+        <h2 class="sec-title">Contact Me</h2>
+        <p class="sec-sub">
+          Open to internships, full-time roles, and collaborations. Feel free to reach out!
+        </p>
+      </div>
+
+      <div class="contact-gerold single">
+
+        <!-- Only contact form -->
+        <form class="contact-form reveal d2" id="cForm" onsubmit="sendMsg(event)">
+          <div class="f-row">
+            <div class="f-field">
+              <label>First Name</label>
+              <input type="text" placeholder="First name" required />
+            </div>
+            <div class="f-field">
+              <label>Last Name</label>
+              <input type="text" placeholder="Last name" required />
+            </div>
+          </div>
+
+          <div class="f-field">
+            <label>Email Address</label>
+            <input type="email" placeholder="Email address" required />
+          </div>
+
+          <div class="f-field">
+            <label>Message</label>
+            <textarea placeholder="Tell me about the opportunity or project..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-send">Send Message</button>
+          <div id="formSuccess">✓ Message sent! I'll get back to you soon.</div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+     FOOTER
+===================================================== -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-inner">
+        <div class="footer-logo">SK</div>
+        <ul class="footer-links">
+          <li><a href="#experience">Experience.</a></li>
+          <li><a href="#skills">Skills.</a></li>
+          <li><a href="#education">Education.</a></li>
+          <li><a href="#works">Work.</a></li>
+          <li><a href="#contact">Contact.</a></li>
+        </ul>
+        <div class="footer-copy">
+          © 2025 All Rights Reserved by
+          <span style="color:var(--purple-light)">Sanika Kundekar</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript — loaded at bottom so DOM is ready -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
