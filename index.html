@@ -48,10 +48,10 @@
         </div>
 
         <ul class="nav-center">
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#skills">Skills</a></li>
           <li><a href="#education">Education</a></li>
-          <li><a href="#works">Works</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#certs">Certifications</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -67,10 +67,10 @@
 
       <!-- Mobile menu -->
       <div class="mobile-nav" id="mobileNav">
-        <a href="#experience" class="ml">Experience</a>
-        <a href="#skills" class="ml">Skills</a>
         <a href="#education" class="ml">Education</a>
-        <a href="#works" class="ml">Works</a>
+        <a href="#skills" class="ml">Skills</a>
+        <a href="#experience" class="ml">Experience</a>
+        <a href="#projects" class="ml">Projects</a>
         <a href="#certs" class="ml">Certifications</a>
         <a href="#contact" class="ml">Contact</a>
       </div>
@@ -160,113 +160,6 @@
   <div class="hr"></div>
 
   <!-- =====================================================
-     EXPERIENCE
-===================================================== -->
-  <section id="experience">
-    <div class="wrap">
-      <div class="section-center reveal">
-        <span class="sec-label">Work History</span>
-        <h2 class="sec-title">My Experience</h2>
-        <p class="sec-sub">
-          Hands-on industry exposure building real-world products and gaining cloud expertise.
-        </p>
-      </div>
-
-      <!-- Existing Experience -->
-      <div class="exp-card reveal">
-        <div>
-          <div class="exp-role">Frontend Developer Intern (SIP)</div>
-          <div class="exp-company">SORTUS E-WASTE MANAGEMENT</div>
-          <div class="exp-mode">Remote</div>
-          <div class="exp-bullets">
-            <div class="exp-bullet">Developed a responsive e-waste management platform using ReactJS, TypeScript, and
-              Tailwind CSS.</div>
-            <div class="exp-bullet">Converted Figma designs into reusable UI components and implemented routing using
-              React Router.</div>
-            <div class="exp-bullet">Built role-based dashboards for individual, industry, and admin users.</div>
-            <div class="exp-bullet">Collaborated using GitHub and followed best practices for clean, scalable frontend
-              architecture.</div>
-            <div class="exp-bullet">Gained hands-on experience in real-world product development and debugging.</div>
-          </div>
-        </div>
-        <div class="exp-period">June 2025<br />—<br />July 2025</div>
-      </div>
-
-      <div class="exp-card reveal d2">
-        <div>
-          <div class="exp-role">Cloud Virtual Intern</div>
-          <div class="exp-company">AICTE (AWS Academy)</div>
-          <div class="exp-mode">Remote</div>
-
-          <div class="exp-bullets">
-            <div class="exp-bullet">
-              Gained hands-on experience with core AWS services including EC2, S3, RDS, and VPC for cloud infrastructure
-              management.
-            </div>
-            <div class="exp-bullet">
-              Implemented infrastructure automation using AWS CloudFormation to streamline deployment processes.
-            </div>
-            <div class="exp-bullet">
-              Developed understanding of cloud architecture, security practices, and cost optimization strategies.
-            </div>
-          </div>
-        </div>
-
-        <div class="exp-period">Oct 2024<br />—<br />Dec 2024</div>
-      </div>
-
-    </div>
-  </section>
-
-  <div class="hr"></div>
-
-  <section id="skills">
-    <div class="wrap">
-
-      <div class="section-center reveal">
-        <span class="sec-label">Expertise</span>
-        <h2 class="sec-title">Technical Skills</h2>
-        <p class="sec-sub" style="margin:0 auto;text-align:center;">
-          Technologies I work with across the full stack.
-        </p>
-      </div>
-      <div class="sk3-list reveal">
-
-        <div class="sk3-row">
-          <span class="sk3-num">01</span>
-          <span class="sk3-title">Web Development</span>
-          <span class="sk3-tags"> HTML &nbsp;·&nbsp; CSS &nbsp;·&nbsp; JavaScript &nbsp;·&nbsp;React.js ·&nbsp; MySQL
-            &nbsp;·&nbsp; MongoDB &nbsp;·&nbsp; Spring Boot &nbsp;·&nbsp; Node.js &nbsp;·&nbsp; REST APIs &nbsp;·&nbsp;
-            WebSocket &nbsp;·&nbsp; </span>
-          <span class="sk3-arrow">↗</span>
-        </div>
-
-        <div class="sk3-row">
-          <span class="sk3-num">02</span>
-          <span class="sk3-title">AI / Machine Learning</span>
-          <span class="sk3-tags">Machine Learning &nbsp;·&nbsp; Random Forest &nbsp;·&nbsp; Gradient Boosting
-            &nbsp;·&nbsp; Linear Regression &nbsp;·&nbsp; EDA &nbsp;·&nbsp; Feature Engineering &nbsp;·&nbsp; Predictive
-            Modeling &nbsp;·&nbsp; Streamlit</span>
-          <span class="sk3-arrow">↗</span>
-        </div>
-
-        <div class="sk3-row">
-          <span class="sk3-num">03</span>
-          <span class="sk3-title">Problem Solving &amp; Tools</span>
-          <span class="sk3-tags">Java &nbsp;·&nbsp; Data Structures & Algorithms &nbsp;·&nbsp; OOP &nbsp;·&nbsp; DBMS
-            &nbsp;·&nbsp; Git / GitHub &nbsp;·&nbsp; Postman &nbsp;·&nbsp; IntelliJ IDEA &nbsp;·&nbsp; VS Code</span>
-          <span class="sk3-arrow">↗</span>
-        </div>
-
-      </div>
-
-    </div>
-    </div>
-  </section>
-
-  <div class="hr"></div>
-
-  <!-- =====================================================
      EDUCATION
 ===================================================== -->
   <section id="education">
@@ -343,196 +236,414 @@
 
       </div>
     </div>
+
   </section>
 
   <div class="hr"></div>
 
-  <div class="works-grid">
-
-    <!-- Card 1 -->
-    <div class="work-card reveal d2">
-      <div class="work-preview">
-        <img src="assets/medical insurance cost prediction.jpg" alt="Insurance ML">
-      </div>
-      <div class="work-body">
-        <div class="work-title">Medical Insurance Cost Prediction</div>
-        <div class="work-desc">
-          Developed a machine learning model to predict medical insurance costs using features like age, BMI, smoking
-          habits, and region. Implemented different models, evaluated using R², MSE, and MAE, and deployed using
-          Streamlit for real-time predictions. </div>
-        <div class="work-tags">
-          <span class="work-tag">Machine Learning</span>
-          <span class="work-tag">Gradient Boosting</span>
-          <span class="work-tag">Random Forest</span>
-          <span class="work-tag">Linear Regression</span>
-          <span class="work-tag">Streamlit</span>
-        </div>
-        <a href="https://github.com/sanika-kundekar" target="_blank" class="btn-check">Check</a>
-      </div>
-    </div>
-
-
-    <!-- Card 2 -->
-    <div class="work-card reveal d2">
-      <div class="work-preview">
-        <img src="assets/cicd.webp" alt="SigmaGPT">
-      </div>
-      <div class="work-body">
-        <div class="work-title">SigmaGPT — AI Chatbot</div>
-        <div class="work-desc">
-          Built and deployed an AI-powered chatbot using ReactJS, Node.js, MongoDB, and OpenAI API. Implemented CI/CD
-          pipelines with GitHub Actions and deployed on AWS EC2 using Docker and Nginx for scalable access.
-        </div>
-        <div class="work-tags">
-          <span class="work-tag">AWS</span>
-          <span class="work-tag">Docker</span>
-          <span class="work-tag">CI/CD</span>
-          <span class="work-tag">OpenAI</span>
-        </div>
-        <!-- <a href="https://github.com/sanika-kundekar" target="_blank" class="btn-check">Check</a> -->
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="work-card reveal d3">
-      <div class="work-preview">
-        <img src="assets/curebuddy.PNG" alt="CureBuddy">
-      </div>
-      <div class="work-body">
-        <div class="work-title">CureBuddy — Appointment System</div>
-        <div class="work-desc">
-          Developed a role-based healthcare web application with OTP-based authentication and advanced doctor search.
-          Designed intuitive dashboards to manage appointments, user profiles, and administrative workflows efficiently.
-        </div>
-        <div class="work-tags">
-          <span class="work-tag">ReactJS</span>
-          <span class="work-tag">Node.js</span>
-          <span class="work-tag">Express</span>
-          <span class="work-tag">Tailwind CSS</span>
-          <span class="work-tag">MongoDB</span>
-          <span class="work-tag">JWT Authentication</span>
-        </div>
-        <a href="https://cure-buddy.vercel.app/" target="_blank" class="btn-check">Check</a>
-      </div>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="work-card reveal d1">
-      <div class="work-preview">
-        <img src="assets/file.png" alt="Encryptor">
-      </div>
-      <div class="work-body">
-        <div class="work-title">File Encryptor / Decryptor</div>
-        <div class="work-desc">
-          Developed a Java-based desktop application for secure file encryption and decryption using XOR and SHA-256.
-          Built a user-friendly Swing GUI with secure file handling and validation.
-        </div>
-        <div class="work-tags">
-          <span class="work-tag">Java</span>
-          <span class="work-tag">Java Swing</span>
-          <span class="work-tag">SHA-256</span>
-          <span class="work-tag">XOR-Encryption</span>
-          <span class="work-tag">NetBeans IDE</span>
-        </div>
-        <a href="https://github.com/meSanika07/File_Encrypt_Decrypt_Tool" target="_blank" class="btn-check">Check</a>
-      </div>
-    </div>
-
-    <div class="work-card reveal d1">
-      <div class="work-preview">
-        <img src="assets/Chatapp.PNG" alt="Chat App">
-      </div>
-      <div class="work-body">
-        <div class="work-title">Real-Time Room-Based Chat App</div>
-        <div class="work-desc">
-          Developed a real-time chat application using Spring Boot, WebSocket, MongoDB, and ReactJS with room-based
-          messaging and low-latency communication. Implemented REST APIs, persistent storage, and a responsive UI with
-          real-time updates. </div>
-        <div class="work-tags">
-          <span class="work-tag">ReactJS</span>
-          <span class="work-tag">Dependency Injection</span>
-          <span class="work-tag">Spring Boot</span>
-          <span class="work-tag">WebSocket</span>
-          <span class="work-tag">STOMP</span>
-          <span class="work-tag">MongoDB</span>
-
-        </div>
-        <!-- <a href="https://github.com/sanika-kundekar" target="_blank" class="btn-check">Check</a> -->
-      </div>
-    </div>
-
-    <!-- Card 1 — Digital Portfolio -->
-<div class="work-card reveal d1">
-  <div class="work-preview" style="padding:0;overflow:hidden;">
-    <img
-      src="assets/portfolio.PNG"
-      alt="Digital Portfolio"
-      style="width:100%;height:100%;object-fit:cover;object-position:top;filter:brightness(0.82) contrast(1.05);"
-    />
-  </div>
-  <div class="work-body">
-    <div class="work-title">Digital Portfolio</div>
-    <div class="work-desc">My professional portfolio designed to showcase skills, experience, and projects in a simple and organized way. Highlights web development work and problem-solving, making it easy for professionals to connect for collaborations and new opportunities.</div>
-    <div class="work-tags">
-      <span class="work-tag">HTML</span>
-      <span class="work-tag">CSS</span>
-      <span class="work-tag">JavaScript</span>
-    </div>
-    <a href="https://sanika-portfolio-iota.vercel.app/" target="_blank" class="btn-check">Check</a>
-  </div>
-</div>
-
-  </div>
-
-  <!-- =====================================================
-     CERTIFICATIONS
-===================================================== -->
-  <section id="certs">
+  <section id="skills">
     <div class="wrap">
+
       <div class="section-center reveal">
-        <span class="sec-label">Certificate</span>
-        <h2 class="sec-title">Certificates &amp; Achievements</h2>
+        <span class="sec-label">Expertise</span>
+        <h2 class="sec-title">Technical Skills</h2>
+        <p class="sec-sub" style="margin:0 auto;text-align:center;">
+          Technologies I work with across the full stack.
+        </p>
       </div>
-      <div class="certs-grid">
+      <div class="sk3-list reveal">
 
-        <div class="cert-card reveal d1">
-          <div class="cert-icon">🟠</div>
-          <div>
-            <div class="cert-title">Postman API Fundamentals Student Expert</div>
-            <div class="cert-issuer">Postman — December 2024</div>
-            <div class="cert-desc">Gained expertise in API fundamentals including GET, POST, PATCH, DELETE requests,
-              query parameters, and API Key Authorization.</div>
-          </div>
+        <div class="sk3-row">
+          <span class="sk3-num">01</span>
+          <span class="sk3-title">Web Development</span>
+          <span class="sk3-tags"> HTML &nbsp;·&nbsp; CSS &nbsp;·&nbsp; JavaScript &nbsp;·&nbsp;React.js ·&nbsp; MySQL
+            &nbsp;·&nbsp; MongoDB &nbsp;·&nbsp; Spring Boot &nbsp;·&nbsp; Node.js &nbsp;·&nbsp; REST APIs &nbsp;·&nbsp;
+            WebSocket &nbsp;·&nbsp; </span>
+          <span class="sk3-arrow">↗</span>
         </div>
 
-        <div class="cert-card reveal d2">
-          <div class="cert-icon">📄</div>
-          <div>
-            <div class="cert-title">
-              Stable Diffusion with LLM Prompt Engineering and CLIP Filtering for Fine-Grained Image Generation
-            </div>
-
-            <div class="cert-issuer">
-              IEEE — ICMNWC 2025 (Dec 2025)
-            </div>
-
-            <div class="cert-desc">
-              Published a research paper proposing a diffusion-based framework combining LLM-driven prompt
-              diversification and CLIP-based filtering to improve fine-grained image generation quality, diversity, and
-              class alignment.
-            </div>
-
-            <div class="cert-desc" style="margin-top:6px; font-size: 0.75rem;">
-              Authors: Ayush Fating, Sanika Kundekar, Kiran Shinde, Sanket Mane, Sharmila Kharat
-            </div>
-
-            <a href="https://ieeexplore.ieee.org/document/11354257" class="btn-check" style="margin-top:10px;">View
-              Paper</a>
-          </div>
+        <div class="sk3-row">
+          <span class="sk3-num">02</span>
+          <span class="sk3-title">AI / Machine Learning</span>
+          <span class="sk3-tags">Machine Learning &nbsp;·&nbsp; Random Forest &nbsp;·&nbsp; Gradient Boosting
+            &nbsp;·&nbsp; Linear Regression &nbsp;·&nbsp; EDA &nbsp;·&nbsp; Feature Engineering &nbsp;·&nbsp; Predictive
+            Modeling &nbsp;·&nbsp; Streamlit</span>
+          <span class="sk3-arrow">↗</span>
         </div>
+
+        <div class="sk3-row">
+          <span class="sk3-num">03</span>
+          <span class="sk3-title">Problem Solving &amp; Tools</span>
+          <span class="sk3-tags">Java &nbsp;·&nbsp; Data Structures & Algorithms &nbsp;·&nbsp; OOP &nbsp;·&nbsp; DBMS
+            &nbsp;·&nbsp; Git / GitHub &nbsp;·&nbsp; Postman &nbsp;·&nbsp; IntelliJ IDEA &nbsp;·&nbsp; VS Code</span>
+          <span class="sk3-arrow">↗</span>
+        </div>
+
       </div>
+
+    </div>
     </div>
   </section>
+
+  <div class="hr"></div>
+
+
+  <!-- =====================================================
+     EXPERIENCE
+===================================================== -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-center reveal">
+        <span class="sec-label">Work History</span>
+        <h2 class="sec-title">My Experience</h2>
+        <p class="sec-sub">
+          Hands-on industry exposure building real-world products and gaining cloud expertise.
+        </p>
+      </div>
+
+      <!-- Existing Experience -->
+      <div class="exp-card reveal">
+        <div>
+          <div class="exp-role">Frontend Developer Intern (SIP)</div>
+          <div class="exp-company">SORTUS E-WASTE MANAGEMENT</div>
+          <div class="exp-mode">Remote</div>
+          <div class="exp-bullets">
+            <div class="exp-bullet">Developed a responsive e-waste management platform using ReactJS, TypeScript, and
+              Tailwind CSS.</div>
+            <div class="exp-bullet">Converted Figma designs into reusable UI components and implemented routing using
+              React Router.</div>
+            <div class="exp-bullet">Built role-based dashboards for individual, industry, and admin users.</div>
+            <div class="exp-bullet">Collaborated using GitHub and followed best practices for clean, scalable frontend
+              architecture.</div>
+            <div class="exp-bullet">Gained hands-on experience in real-world product development and debugging.</div>
+          </div>
+        </div>
+        <div class="exp-period">June 2025<br />—<br />July 2025</div>
+      </div>
+
+      <div class="exp-card reveal d2">
+        <div>
+          <div class="exp-role">Cloud Virtual Intern</div>
+          <div class="exp-company">AICTE (AWS Academy)</div>
+          <div class="exp-mode">Remote</div>
+
+          <div class="exp-bullets">
+            <div class="exp-bullet">
+              Gained hands-on experience with core AWS services including EC2, S3, RDS, and VPC for cloud infrastructure
+              management.
+            </div>
+            <div class="exp-bullet">
+              Implemented infrastructure automation using AWS CloudFormation to streamline deployment processes.
+            </div>
+            <div class="exp-bullet">
+              Developed understanding of cloud architecture, security practices, and cost optimization strategies.
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-period">Oct 2024<br />—<br />Dec 2024</div>
+      </div>
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- =====================================================
+     PROJECTS
+===================================================== -->
+  <section id="projects">
+    <div class="wrap">
+
+      <div class="section-center reveal">
+        <span class="sec-label">My Work</span>
+        <h2 class="sec-title">Projects</h2>
+        <p class="sec-sub">
+          Some of the projects I have built using web development,
+          machine learning, cloud, and backend technologies.
+        </p>
+      </div>
+
+      <div class="works-grid">
+
+        <!-- Your Project Cards Here -->
+        <!-- Card 1 -->
+        <div class="work-card reveal d2">
+          <div class="work-preview">
+            <img src="assets/medical insurance cost prediction.jpg" alt="Insurance ML">
+          </div>
+          <div class="work-body">
+            <div class="work-title">Medical Insurance Cost Prediction</div>
+            <div class="work-desc">
+              Developed a machine learning model to predict medical insurance costs using features like age, BMI,
+              smoking
+              habits, and region. Implemented different models, evaluated using R², MSE, and MAE, and deployed using
+              Streamlit for real-time predictions. </div>
+            <div class="work-tags">
+              <span class="work-tag">Machine Learning</span>
+              <span class="work-tag">Gradient Boosting</span>
+              <span class="work-tag">Random Forest</span>
+              <span class="work-tag">Linear Regression</span>
+              <span class="work-tag">Streamlit</span>
+            </div>
+            <a href="https://github.com/sanika-kundekar" target="_blank" class="btn-check">Check</a>
+          </div>
+        </div>
+
+
+        <!-- Card 2 -->
+        <div class="work-card reveal d2">
+          <div class="work-preview">
+            <img src="assets/cicd.webp" alt="SigmaGPT">
+          </div>
+          <div class="work-body">
+            <div class="work-title">SigmaGPT — AI Chatbot</div>
+            <div class="work-desc">
+              Built and deployed an AI-powered chatbot using ReactJS, Node.js, MongoDB, and OpenAI API. Implemented
+              CI/CD
+              pipelines with GitHub Actions and deployed on AWS EC2 using Docker and Nginx for scalable access.
+            </div>
+            <div class="work-tags">
+              <span class="work-tag">AWS</span>
+              <span class="work-tag">Docker</span>
+              <span class="work-tag">CI/CD</span>
+              <span class="work-tag">OpenAI</span>
+            </div>
+            <!-- <a href="https://github.com/sanika-kundekar" target="_blank" class="btn-check">Check</a> -->
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="work-card reveal d3">
+          <div class="work-preview">
+            <img src="assets/curebuddy.PNG" alt="CureBuddy">
+          </div>
+          <div class="work-body">
+            <div class="work-title">CureBuddy — Appointment System</div>
+            <div class="work-desc">
+              Developed a role-based healthcare web application with OTP-based authentication and advanced doctor
+              search.
+              Designed intuitive dashboards to manage appointments, user profiles, and administrative workflows
+              efficiently.
+            </div>
+            <div class="work-tags">
+              <span class="work-tag">ReactJS</span>
+              <span class="work-tag">Node.js</span>
+              <span class="work-tag">Express</span>
+              <span class="work-tag">Tailwind CSS</span>
+              <span class="work-tag">MongoDB</span>
+              <span class="work-tag">JWT Authentication</span>
+            </div>
+            <a href="https://cure-buddy.vercel.app/" target="_blank" class="btn-check">Check</a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="work-card reveal d1">
+          <div class="work-preview">
+            <img src="assets/file.png" alt="Encryptor">
+          </div>
+          <div class="work-body">
+            <div class="work-title">File Encryptor / Decryptor</div>
+            <div class="work-desc">
+              Developed a Java-based desktop application for secure file encryption and decryption using XOR and
+              SHA-256.
+              Built a user-friendly Swing GUI with secure file handling and validation.
+            </div>
+            <div class="work-tags">
+              <span class="work-tag">Java</span>
+              <span class="work-tag">Java Swing</span>
+              <span class="work-tag">SHA-256</span>
+              <span class="work-tag">XOR-Encryption</span>
+              <span class="work-tag">NetBeans IDE</span>
+            </div>
+            <a href="https://github.com/meSanika07/File_Encrypt_Decrypt_Tool" target="_blank"
+              class="btn-check">Check</a>
+          </div>
+        </div>
+
+        <div class="work-card reveal d1">
+          <div class="work-preview">
+            <img src="assets/Chatapp.PNG" alt="Chat App">
+          </div>
+          <div class="work-body">
+            <div class="work-title">Real-Time Room-Based Chat App</div>
+            <div class="work-desc">
+              Developed a real-time chat application using Spring Boot, WebSocket, MongoDB, and ReactJS with room-based
+              messaging and low-latency communication. Implemented REST APIs, persistent storage, and a responsive UI
+              with
+              real-time updates. </div>
+            <div class="work-tags">
+              <span class="work-tag">ReactJS</span>
+              <span class="work-tag">Dependency Injection</span>
+              <span class="work-tag">Spring Boot</span>
+              <span class="work-tag">WebSocket</span>
+              <span class="work-tag">STOMP</span>
+              <span class="work-tag">MongoDB</span>
+
+            </div>
+            <!-- <a href="https://github.com/sanika-kundekar" target="_blank" class="btn-check">Check</a> -->
+          </div>
+        </div>
+
+        <!-- Card 1 — Digital Portfolio -->
+        <div class="work-card reveal d1">
+          <div class="work-preview" style="padding:0;overflow:hidden;">
+            <img src="assets/portfolio.PNG" alt="Digital Portfolio"
+              style="width:100%;height:100%;object-fit:cover;object-position:top;filter:brightness(0.82) contrast(1.05);" />
+          </div>
+          <div class="work-body">
+            <div class="work-title">Digital Portfolio</div>
+            <div class="work-desc">My professional portfolio designed to showcase skills, experience, and projects in a
+              simple and organized way. Highlights web development work and problem-solving, making it easy for
+              professionals to connect for collaborations and new opportunities.</div>
+            <div class="work-tags">
+              <span class="work-tag">HTML</span>
+              <span class="work-tag">CSS</span>
+              <span class="work-tag">JavaScript</span>
+            </div>
+            <a href="https://sanika-portfolio-iota.vercel.app/" target="_blank" class="btn-check">Check</a>
+          </div>
+
+        </div>
+
+      </div>
+  </section>
+
+  <div class="hr"></div>
+
+<!-- =====================================================
+     CERTIFICATIONS
+===================================================== -->
+<section id="certs">
+  <div class="wrap">
+
+    <div class="section-center reveal">
+      <span class="sec-label">Certificate</span>
+      <h2 class="sec-title">Certificates &amp; Achievements</h2>
+      <p class="sec-sub">
+        Certifications, achievements, and research contributions showcasing
+        technical expertise and continuous learning.
+      </p>
+    </div>
+
+    <div class="certs-grid">
+
+      <!-- Postman Certificate -->
+      <div class="cert-card reveal d1">
+        <div class="cert-icon">1</div>
+
+        <div>
+          <div class="cert-title">
+            Postman API Fundamentals Student Expert
+          </div>
+
+          <div class="cert-issuer">
+            Postman — December 2024
+          </div>
+
+          <div class="cert-desc">
+            Gained expertise in API fundamentals including GET, POST,
+            PATCH, DELETE requests, query parameters,
+            and API Key Authorization.
+          </div>
+
+          <a href="assets/POSTMAN.jpg"
+             target="_blank"
+             class="verify-link">
+             Verify Certificate →
+          </a>
+        </div>
+      </div>
+
+      <!-- AWS Cloud Certificate -->
+      <div class="cert-card reveal d2">
+        <div class="cert-icon">2</div>
+
+        <div>
+          <div class="cert-title">
+            AWS Certified Cloud Practitioner
+          </div>
+
+          <div class="cert-issuer">
+            AWS — May 2026
+          </div>
+
+          <div class="cert-desc">
+            Certified in AWS Cloud fundamentals including EC2,
+            S3, IAM, VPC, cloud security, pricing,
+            and core AWS services.
+          </div>
+
+          <a href="assets/AWS Certified Cloud Practitioner certificate_page-0001 (1).jpg"
+             target="_blank"
+             class="verify-link">
+             Verify Certificate →
+          </a>
+        </div>
+      </div>
+
+      <!-- Research Paper -->
+      <div class="cert-card reveal d3">
+        <div class="cert-icon">3</div>
+
+        <div>
+          <div class="cert-title">
+            Stable Diffusion with LLM Prompt Engineering
+            and CLIP Filtering for Fine-Grained Image Generation
+          </div>
+
+          <div class="cert-issuer">
+            IEEE — ICMNWC 2025 (Dec 2025)
+          </div>
+
+          <div class="cert-desc">
+            Published a research paper proposing a diffusion-based framework
+            combining LLM-driven prompt diversification and CLIP-based
+            filtering to improve fine-grained image generation quality,
+            diversity, and class alignment.
+          </div>
+
+          <a href="https://ieeexplore.ieee.org/document/11354257"
+             target="_blank"
+             class="verify-link">
+             View Research Paper →
+          </a>
+        </div>
+      </div>
+
+      <!-- Full Stack Development Certificate -->
+      <div class="cert-card reveal d4">
+        <div class="cert-icon">4</div>
+
+        <div>
+          <div class="cert-title">
+            Super 30 Full Stack Development Program
+          </div>
+
+          <div class="cert-issuer">
+            MIT Academy of Engineering — August 2025
+          </div>
+
+          <div class="cert-desc">
+            Successfully completed a 200-hour Super 30 Training Program
+            focused on full-stack development, Java programming,
+            project building, version control, and deployment practices.
+          </div>
+
+          <a href="assets/Kundekar Sanika Baban Fullstack Development Certificate_page-0001.jpg"
+             target="_blank"
+             class="verify-link">
+             Verify Certificate →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <div class="hr"></div>
 
@@ -590,7 +701,7 @@
           <li><a href="#experience">Experience.</a></li>
           <li><a href="#skills">Skills.</a></li>
           <li><a href="#education">Education.</a></li>
-          <li><a href="#works">Work.</a></li>
+          <li><a href="#works">Projects</a></li>
           <li><a href="#contact">Contact.</a></li>
         </ul>
         <div class="footer-copy">

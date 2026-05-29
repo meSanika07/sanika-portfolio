@@ -1264,62 +1264,114 @@ section {
   background: var(--bg2);
 }
 
+/* Horizontal Layout */
 .certs-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  margin-top: 2.5rem;
 }
 
+/* Rectangle Card */
 .cert-card {
+  width: 100%;
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 1.75rem;
+  border-radius: 20px;
+  padding: 1.5rem 1.8rem;
+
   display: flex;
-  gap: 1.25rem;
   align-items: flex-start;
-  transition: border-color .25s, transform .25s var(--ease), background .25s;
+  gap: 1.4rem;
+
+  transition: all .3s var(--ease);
 }
 
 .cert-card:hover {
   border-color: var(--purple);
-  transform: translateY(-3px);
   background: var(--card-h);
+  transform: translateY(-4px);
 }
 
+/* Number */
 .cert-icon {
-  width: 46px;
-  height: 46px;
-  flex-shrink: 0;
-  border-radius: 12px;
-  background: var(--purple-glow);
-  border: 1px solid rgba(123, 47, 190, .25);
+  width: 54px;
+  height: 54px;
+  min-width: 54px;
+
+  border-radius: 16px;
+  background: linear-gradient(135deg,#7b2fbe,#9b59b6);
+
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
+
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
+/* Content */
 .cert-title {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: .98rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--text);
-  margin-bottom: .25rem;
+  margin-bottom: .35rem;
+  line-height: 1.5;
 }
 
 .cert-issuer {
-  font-size: .8rem;
+  font-size: .82rem;
   color: var(--purple-light);
-  font-weight: 500;
-  margin-bottom: .35rem;
+  font-weight: 600;
+  margin-bottom: .7rem;
 }
 
 .cert-desc {
-  font-size: .8rem;
+  font-size: .84rem;
   color: var(--text2);
-  line-height: 1.65;
+  line-height: 1.8;
+  max-width: 95%;
 }
+
+/* Verify Link */
+.verify-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  margin-top: 1rem;
+
+  font-size: .82rem;
+  font-weight: 600;
+
+  color: var(--purple-light);
+  text-decoration: none;
+
+  transition: .25s ease;
+}
+
+.verify-link:hover {
+  color: #c084fc;
+  transform: translateX(4px);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .cert-card {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.3rem;
+  }
+
+  .cert-desc {
+    max-width: 100%;
+  }
+}
+
+
 
 /* ── CONTACT ──────────────────────────────────────── */
 #contact {
