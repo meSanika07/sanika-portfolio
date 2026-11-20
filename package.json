@@ -1,0 +1,14 @@
+{
+  "name": "sanika-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio of Sanika Kundekar — Software Engineer",
+  "scripts": {
+    "start": "serve . -p 8080",
+    "build": "tailwindcss -i css/input.css -o css/styles.css --minify",
+    "watch": "tailwindcss -i css/input.css -o css/styles.css --watch"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4",
+    "tailwindcss": "^3.4.19"
+  }
+}

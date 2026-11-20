@@ -1,718 +1,1613 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" class="dark scroll-smooth">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sanika Kundekar — Portfolio</title>
+  <title>Sanika Kundekar — Software Engineer | Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Sanika Kundekar — Full-Stack Software Engineer specializing in PERN Stack (React 19, Node.js, PostgreSQL), Cloud Architecture (AWS Certified), and Scalable Web Applications." />
+  <meta name="author" content="Sanika Kundekar" />
 
-  <!-- Google Fonts -->
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Sanika Kundekar — Software Engineer Portfolio" />
+  <meta property="og:description"
+    content="Full-Stack Software Engineer building scalable PERN stack applications, cloud architecture on AWS, and production web systems." />
+  <meta property="og:image" content="assets/df50e5d3a4ac4651977404a03c31bcff_doubao-seedream-4-5-251128.png" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Inter, Plus Jakarta Sans, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link
-    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
     rel="stylesheet" />
 
-  <!-- Stylesheet -->
+  <!-- Compiled Tailwind CSS & Custom Stylesheet -->
   <link rel="stylesheet" href="css/styles.css" />
-
 </head>
 
-<body>
+<body
+  class="bg-surface-50 text-slate-800 dark:bg-surface-950 dark:text-slate-100 min-h-screen antialiased selection:bg-brand-500/20 selection:text-brand-600 dark:selection:text-brand-300">
 
   <!-- =====================================================
-     LOADER
-===================================================== -->
-  <div id="loader">
-    <div class="loader-letters">S · K</div>
-  </div>
+       STANDARD FORMAL TOP NAVBAR
+  ===================================================== -->
+  <header id="navbar"
+    class="fixed top-0 left-0 right-0 z-50 h-16 bg-white/95 dark:bg-surface-950/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-all duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-full flex items-center justify-between">
 
-  <!-- =====================================================
-     NAVBAR
-===================================================== -->
-  <nav id="navbar">
-    <div class="wrap">
-      <div class="nav-inner">
-
-        <div class="nav-left">
-          <div class="nav-logo">SK</div>
-          <div class="nav-email" id="navEmail">
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-              <polyline points="22,6 12,13 2,6" />
-            </svg>
-            sanikakundekar007@gmail.com
-          </div>
+      <!-- Formal Monogram & Name -->
+      <a href="#hero" class="flex items-center gap-2.5 group focus:outline-none" aria-label="Sanika Kundekar Home">
+        <div
+          class="w-8 h-8 rounded-md bg-brand-600 text-white flex items-center justify-center font-mono font-bold text-xs shadow-sm">
+          SK
         </div>
+        <span class="font-display font-bold text-sm tracking-tight text-slate-900 dark:text-white">
+          Sanika Kundekar
+        </span>
+      </a>
 
-        <ul class="nav-center">
-          <li><a href="#education">Education</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#certs">Certifications</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-6 text-xs font-medium text-slate-600 dark:text-slate-300"
+        aria-label="Main Navigation">
+        <a href="#experience"
+          class="nav-link desktop-nav-link hover:text-slate-950 dark:hover:text-white">Experience</a>
+        <a href="#projects" class="nav-link desktop-nav-link hover:text-slate-950 dark:hover:text-white">Projects</a>
+        <a href="#skills" class="nav-link desktop-nav-link hover:text-slate-950 dark:hover:text-white">Skills</a>
+        <a href="#education" class="nav-link desktop-nav-link hover:text-slate-950 dark:hover:text-white">Education</a>
+        <a href="#certs" class="nav-link desktop-nav-link hover:text-slate-950 dark:hover:text-white">Certifications</a>
+        <a href="#contact" class="nav-link desktop-nav-link hover:text-slate-950 dark:hover:text-white">Contact</a>
+      </nav>
 
-        <div class="nav-right">
-          <button class="theme-btn" id="themeBtn" aria-label="Toggle theme"></button>
-          <div class="hamburger" id="hamburger">
-            <span></span><span></span><span></span>
-          </div>
-        </div>
+      <!-- Right Actions: Resume Button & Theme Toggle -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a href="assets/Kundekar_Sanika.pdf" download="Kundekar_Sanika.pdf" target="_blank"
+          class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold bg-brand-600 hover:bg-brand-700 text-white transition-colors shadow-sm">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          <span>Resume</span>
+        </a>
 
+        <!-- Theme Toggle Button -->
+        <button id="themeBtn" aria-label="Toggle theme"
+          class="p-2 rounded-md text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-surface-850 transition-colors focus:outline-none">
+          <svg class="theme-icon-sun w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 9H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg class="theme-icon-moon w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="hamburgerBtn" aria-expanded="false" aria-label="Open mobile menu"
+          class="md:hidden p-2 rounded-md text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-surface-850 transition-colors focus:outline-none">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
       </div>
 
-      <!-- Mobile menu -->
-      <div class="mobile-nav" id="mobileNav">
-        <a href="#education" class="ml">Education</a>
-        <a href="#skills" class="ml">Skills</a>
-        <a href="#experience" class="ml">Experience</a>
-        <a href="#projects" class="ml">Projects</a>
-        <a href="#certs" class="ml">Certifications</a>
-        <a href="#contact" class="ml">Contact</a>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobileMenu"
+      class="hidden md:hidden absolute top-16 left-0 right-0 bg-white/98 dark:bg-surface-900/98 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 p-4 shadow-xl space-y-1">
+      <a href="#experience"
+        class="mobile-nav-link block px-3 py-2 rounded-md text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-surface-850">
+        Experience
+      </a>
+      <a href="#projects"
+        class="mobile-nav-link block px-3 py-2 rounded-md text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-surface-850">
+        Projects
+      </a>
+      <a href="#skills"
+        class="mobile-nav-link block px-3 py-2 rounded-md text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-surface-850">
+        Skills
+      </a>
+      <a href="#education"
+        class="mobile-nav-link block px-3 py-2 rounded-md text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-surface-850">
+        Education
+      </a>
+      <a href="#certs"
+        class="mobile-nav-link block px-3 py-2 rounded-md text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-surface-850">
+        Certifications
+      </a>
+      <a href="#contact"
+        class="mobile-nav-link block px-3 py-2 rounded-md text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-surface-850">
+        Contact
+      </a>
+      <div class="pt-3 mt-2 border-t border-slate-200 dark:border-slate-800">
+        <a href="assets/Kundekar_Sanika.pdf" download="Kundekar_Sanika.pdf"
+          class="block text-center py-2 rounded-md text-xs font-semibold bg-brand-600 text-white shadow-sm">
+          Download Resume (PDF)
+        </a>
       </div>
     </div>
-  </nav>
+  </header>
+
 
   <!-- =====================================================
-     HERO
-===================================================== -->
-  <section id="hero">
-    <div class="wrap">
-      <div class="hero-grid">
+       FORMAL HERO SECTION (Full-Height First Fold)
+  ===================================================== -->
+  <section id="hero" class="relative min-h-screen flex flex-col justify-between pt-20 pb-8 sm:pt-24 sm:pb-10 bg-surface-50 dark:bg-surface-950">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 w-full my-auto">
 
-        <!-- Left -->
-        <div>
-          <p class="hero-hi">HI THERE</p>
+      <!-- Hero Grid: Intro & Profile Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
-          <!-- Main Name
-          <h1 class="hero-name">
-            <span>S</span><span>a</span><span>n</span><span>i</span><span>k</span><span>a</span>
-            <span>&nbsp;</span>
-            <span>K</span><span>u</span><span>n</span><span>d</span><span>e</span><span>k</span><span>a</span><span>r</span>
-          </h1> -->
-          <h1 class="hero-name">
-            <span class="name-animate">Sanika Kundekar</span>
+        <!-- Left: Intro Details -->
+        <div class="lg:col-span-8 reveal-init">
+
+          <!-- Monospace Status Pill -->
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-slate-100 dark:bg-surface-850 border border-slate-200 dark:border-slate-800 text-xs font-mono text-slate-700 dark:text-slate-300 mb-5">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>AVAILABLE FOR SDE ROLES &amp; INTERNSHIPS</span>
+          </div>
+
+          <!-- Main Heading -->
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight font-display text-slate-900 dark:text-white leading-tight mb-2.5">
+            Sanika Kundekar
           </h1>
 
-          <!--  Subtitle -->
-          <h2 class="hero-title">Computer Science Undergraduate</h2>
-
-          <!--  Description -->
-          <p class="hero-desc">
-            Transforming ideas into impactful digital solutions with creativity and code.
-            Driven by curiosity to build smart, user-focused applications that make a difference.
+          <!-- Professional Subtitle -->
+          <p class="text-base sm:text-lg font-semibold text-brand-600 dark:text-brand-400 font-mono mb-4">
+            Software Engineer · Full-Stack Developer
           </p>
 
-          <!-- Actions -->
-          <div class="hero-actions">
-            <a href="assets/Sanika _Kundekar .pdf" class="btn-cv" download>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                <polyline points="7 10 12 15 17 10" />
-                <line x1="12" y1="15" x2="12" y2="3" />
+          <!-- Clean Bio (Updated per user request) -->
+          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-8 max-w-2xl">
+            Transforming ideas into impactful digital solutions with creativity and code. Driven by curiosity to build smart, user-focused applications that make a difference.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center gap-3.5 mb-8">
+            <!-- Download Resume (Solid Blue) -->
+            <a href="assets/Kundekar_Sanika.pdf" download="Kundekar_Sanika.pdf"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md font-semibold text-xs sm:text-sm text-white bg-brand-600 hover:bg-brand-700 transition-colors shadow-sm">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
-              Download CV ↓
+              <span>Download Resume</span>
             </a>
 
-            <div class="social-icons">
-              <a href="https://www.linkedin.com/in/sanika-kundekar-ab0447274" target="_blank" class="social-icon"
-                title="LinkedIn">in</a>
+            <!-- View Projects (Outline) -->
+            <a href="#projects"
+              class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-md font-semibold text-xs sm:text-sm text-slate-700 dark:text-slate-200 bg-white dark:bg-surface-900 border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-surface-850 transition-colors">
+              <span>View Projects</span>
+              <span>↓</span>
+            </a>
 
-              <a href="https://github.com/meSanika07" target="_blank" class="social-icon" title="GitHub">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
-                </svg>
-              </a>
+            <!-- Contact Link -->
+            <a href="#contact"
+              class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-md font-semibold text-xs sm:text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+              <span>Get in Touch →</span>
+            </a>
+          </div>
 
-              <a href="https://leetcode.com/u/mesanika_17/" target="_blank" class="social-icon" title="LeetCode"
-                style="font-size:.62rem;">LC</a>
+          <!-- Quick Professional Links -->
+          <div class="flex flex-wrap items-center gap-4 text-xs font-mono text-slate-500 dark:text-slate-400 pt-1">
+            <a href="https://github.com/meSanika07" target="_blank" rel="noopener noreferrer"
+              class="hover:text-brand-600 dark:hover:text-brand-400 flex items-center gap-1">
+              <span>GitHub</span>
+              <span>↗</span>
+            </a>
+            <span class="text-slate-300 dark:text-slate-700">/</span>
+            <a href="https://www.linkedin.com/in/sanika-kundekar-ab0447274" target="_blank" rel="noopener noreferrer"
+              class="hover:text-brand-600 dark:hover:text-brand-400 flex items-center gap-1">
+              <span>LinkedIn</span>
+              <span>↗</span>
+            </a>
+            <span class="text-slate-300 dark:text-slate-700">/</span>
+            <a href="https://leetcode.com/u/mesanika_17/" target="_blank" rel="noopener noreferrer"
+              class="hover:text-brand-600 dark:hover:text-brand-400 flex items-center gap-1">
+              <span>LeetCode</span>
+              <span>↗</span>
+            </a>
+            <span class="text-slate-300 dark:text-slate-700">/</span>
+            <a href="mailto:sanikakundekar007@gmail.com"
+              class="hover:text-brand-600 dark:hover:text-brand-400 flex items-center gap-1">
+              <span>Email</span>
+            </a>
+          </div>
 
-              <a href="mailto:sanikakundekar007@gmail.com" class="social-icon" title="Email">@</a>
+        </div>
+
+        <!-- Right: Profile Image (Clean Formal Portrait Box) -->
+        <div class="lg:col-span-4 flex justify-center lg:justify-end reveal-init">
+          <div class="formal-box p-3.5 sm:p-4 w-56 sm:w-64 lg:w-72 shadow-sm">
+            <div class="aspect-square w-full rounded overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-surface-850">
+              <img src="assets/df50e5d3a4ac4651977404a03c31bcff_doubao-seedream-4-5-251128.png"
+                alt="Sanika Kundekar"
+                class="w-full h-full object-cover object-top filter brightness-[0.98] contrast-[1.02]" />
             </div>
           </div>
         </div>
 
-        <!-- Right — Photo (hover to 3D rotate) -->
-        <div class="hero-photo">
-          <div class="photo-rotate-wrap" title="Hover me!">
-            <div class="hero-img-frame">
-              <img src="assets/df50e5d3a4ac4651977404a03c31bcff_doubao-seedream-4-5-251128.png" alt="Sanika Kundekar" />
-              <div class="avatar-svg">
-                <svg viewBox="0 0 80 80" fill="rgba(155,89,232,0.5)">
-                  <circle cx="40" cy="28" r="18" />
-                  <ellipse cx="40" cy="76" rx="30" ry="20" />
-                </svg>
-                <span>Your Photo Here</span>
+      </div>
+
+    </div>
+
+    <!-- Subtle Scroll Down Indicator -->
+    <div class="hidden sm:flex justify-center pb-2 text-slate-400 dark:text-slate-600 reveal-init">
+      <a href="#experience" class="inline-flex items-center gap-1.5 text-xs font-mono hover:text-brand-600 dark:hover:text-brand-400 transition-colors" aria-label="Scroll to experience">
+        <span>Scroll to Experience</span>
+        <svg class="w-3.5 h-3.5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       01. EXPERIENCE SECTION
+  ===================================================== -->
+  <section id="experience" class="py-16 sm:py-20 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+      <!-- Standard Section Header -->
+      <div class="mb-10 sm:mb-12 reveal-init">
+        <div
+          class="flex items-center gap-2 text-xs font-mono font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-wider mb-2">
+          <span>// 01. INDUSTRY EXPERIENCE</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+          Work Experience
+        </h2>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mt-2 max-w-2xl">
+          Practical software engineering internships delivering production features, full-stack modules, and cloud
+          infrastructure.
+        </p>
+      </div>
+
+      <!-- Experience Cards List -->
+      <div class="space-y-6">
+
+        <!-- Experience 1: HubbleHox Technologies (Current) -->
+        <div class="formal-box p-6 sm:p-7 reveal-init">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-1.5">
+                <span
+                  class="px-2 py-0.5 text-xs font-mono font-semibold rounded bg-brand-50 dark:bg-brand-950/60 text-brand-700 dark:text-brand-300 border border-brand-200 dark:border-brand-800">
+                  Current Role
+                </span>
+                <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Malad W. Mumbai ·
+                  Onsite/Hybrid</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold font-display text-slate-900 dark:text-white">
+                Full-Stack Developer Intern
+              </h3>
+              <p class="text-sm font-semibold text-brand-600 dark:text-brand-400 mt-0.5">
+                HubbleHox Technologies Pvt. Ltd.
+              </p>
+            </div>
+            <div class="text-xs font-mono text-slate-500 dark:text-slate-400 sm:text-right shrink-0">
+              June 2026 — Present
+            </div>
+          </div>
+
+          <!-- Bullet Points -->
+          <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mt-4">
+            <li class="flex items-start gap-2.5">
+              <span class="text-brand-600 dark:text-brand-400 font-bold shrink-0">▪</span>
+              <span>Engineered end-to-end production features across the <strong
+                  class="text-slate-900 dark:text-white font-medium">PERN stack (React 19, Node.js, Express 5,
+                  PostgreSQL, Sequelize ORM, and Redis)</strong> for Candidate, College, and State Backoffice
+                platforms.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-brand-600 dark:text-brand-400 font-bold shrink-0">▪</span>
+              <span>Built an Excel bulk upload engine with <strong
+                  class="text-slate-900 dark:text-white font-medium">Node.js, Multer, and SheetJS (xlsx)</strong>,
+                optimizing database roundtrips by 95% via O(1) in-memory Hash Map validations and batched Sequelize
+                <code class="text-xs font-mono px-1 py-0.5 rounded bg-slate-100 dark:bg-surface-850">bulkCreate</code>,
+                reducing ingestion time by 80% for 1,000+ records.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-brand-600 dark:text-brand-400 font-bold shrink-0">▪</span>
+              <span>Engineered the Merit List Generation module end-to-end with batched PostgreSQL queries and a
+                responsive React table with server-side pagination and debounced search for 10,000+ applicants.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-brand-600 dark:text-brand-400 font-bold shrink-0">▪</span>
+              <span>Designed PostgreSQL schemas for PWD, Orphan, and Defence quotas and integrated them with a dynamic
+                <strong class="text-slate-900 dark:text-white font-medium">React Hook Form</strong> conditionally
+                rendering required verification checklists.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-brand-600 dark:text-brand-400 font-bold shrink-0">▪</span>
+              <span>Built an institutional seat-surrender workflow with Sequelize transactions and interactive React
+                dashboards to synchronize college seat forfeitures with live state seat matrices.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-brand-600 dark:text-brand-400 font-bold shrink-0">▪</span>
+              <span>Created an in-house SVG Captcha authentication service with cryptographic session validation
+                middleware and database audit logging to safeguard candidate logins.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-brand-600 dark:text-brand-400 font-bold shrink-0">▪</span>
+              <span>Integrated RESTful endpoints and real-time <strong
+                  class="text-slate-900 dark:text-white font-medium">Socket.IO streams using TanStack React Query and
+                  Axios</strong>, implementing error boundaries, caching, and optimistic UI updates.</span>
+            </li>
+          </ul>
+
+          <!-- Tech Tags -->
+          <div class="flex flex-wrap gap-1.5 mt-5 pt-4 border-t border-slate-100 dark:border-slate-800">
+            <span
+              class="px-2 py-0.5 text-xs font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">React
+              19</span>
+            <span
+              class="px-2 py-0.5 text-xs font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Node.js</span>
+            <span
+              class="px-2 py-0.5 text-xs font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Express
+              5</span>
+            <span
+              class="px-2 py-0.5 text-xs font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">PostgreSQL</span>
+            <span
+              class="px-2 py-0.5 text-xs font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Sequelize
+              ORM</span>
+            <span
+              class="px-2 py-0.5 text-xs font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Redis</span>
+            <span
+              class="px-2 py-0.5 text-xs font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Socket.IO</span>
+            <span
+              class="px-2 py-0.5 text-xs font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">TanStack
+              Query</span>
+            <span
+              class="px-2 py-0.5 text-xs font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">SheetJS</span>
+            <span
+              class="px-2 py-0.5 text-xs font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">React
+              Hook Form</span>
+          </div>
+        </div>
+
+        <!-- Experience 2: Sortus E-Waste Management -->
+        <div class="formal-box p-6 sm:p-7 reveal-init">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-1.5">
+                <span
+                  class="px-2 py-0.5 text-xs font-mono font-semibold rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                  Internship
+                </span>
+                <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Remote</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold font-display text-slate-900 dark:text-white">
+                Frontend Developer Intern (SIP)
+              </h3>
+              <p class="text-sm font-semibold text-brand-600 dark:text-brand-400 mt-0.5">
+                SORTUS E-WASTE MANAGEMENT
+              </p>
+            </div>
+            <div class="text-xs font-mono text-slate-500 dark:text-slate-400 sm:text-right shrink-0">
+              June 2025 — July 2025
+            </div>
+          </div>
+
+          <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mt-4">
+            <li class="flex items-start gap-2.5">
+              <span class="text-brand-600 dark:text-brand-400 font-bold shrink-0">▪</span>
+              <span>Developed a fully responsive e-waste management web platform utilizing <strong
+                  class="text-slate-900 dark:text-white font-medium">ReactJS, TypeScript, and Tailwind
+                  CSS</strong>.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-brand-600 dark:text-brand-400 font-bold shrink-0">▪</span>
+              <span>Transformed Figma UI/UX designs into modular components and implemented client-side routing with
+                <strong class="text-slate-900 dark:text-white font-medium">React Router</strong>.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-brand-600 dark:text-brand-400 font-bold shrink-0">▪</span>
+              <span>Engineered secure role-based dashboards tailored for individual consumers, industrial partners, and
+                platform administrators.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-brand-600 dark:text-brand-400 font-bold shrink-0">▪</span>
+              <span>Collaborated using GitHub version control adhering to industry best practices for modular frontend
+                systems.</span>
+            </li>
+          </ul>
+
+          <div class="flex flex-wrap gap-1.5 mt-5 pt-4 border-t border-slate-100 dark:border-slate-800">
+            <span
+              class="px-2 py-0.5 text-xs font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">ReactJS</span>
+            <span
+              class="px-2 py-0.5 text-xs font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">TypeScript</span>
+            <span
+              class="px-2 py-0.5 text-xs font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Tailwind
+              CSS</span>
+            <span
+              class="px-2 py-0.5 text-xs font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">React
+              Router</span>
+            <span
+              class="px-2 py-0.5 text-xs font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Figma</span>
+            <span
+              class="px-2 py-0.5 text-xs font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Git
+              &amp; GitHub</span>
+          </div>
+        </div>
+
+        <!-- Experience 3: AICTE AWS Virtual Internship -->
+        <div class="formal-box p-6 sm:p-7 reveal-init">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-1.5">
+                <span
+                  class="px-2 py-0.5 text-xs font-mono font-semibold rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                  Cloud Virtual Internship
+                </span>
+                <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Remote</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold font-display text-slate-900 dark:text-white">
+                Cloud Virtual Intern
+              </h3>
+              <p class="text-sm font-semibold text-brand-600 dark:text-brand-400 mt-0.5">
+                AICTE (AWS Academy)
+              </p>
+            </div>
+            <div class="text-xs font-mono text-slate-500 dark:text-slate-400 sm:text-right shrink-0">
+              Oct 2024 — Dec 2024
+            </div>
+          </div>
+
+          <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mt-4">
+            <li class="flex items-start gap-2.5">
+              <span class="text-brand-600 dark:text-brand-400 font-bold shrink-0">▪</span>
+              <span>Configured core AWS services including <strong
+                  class="text-slate-900 dark:text-white font-medium">Amazon EC2 compute, Amazon S3 storage, Amazon RDS
+                  databases, and custom Virtual Private Clouds (VPC)</strong>.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-brand-600 dark:text-brand-400 font-bold shrink-0">▪</span>
+              <span>Implemented infrastructure automation templates using <strong
+                  class="text-slate-900 dark:text-white font-medium">AWS CloudFormation</strong> to standardize cloud
+                deployment lifecycles.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-brand-600 dark:text-brand-400 font-bold shrink-0">▪</span>
+              <span>Deepened comprehension of cloud security principles, Identity and Access Management (IAM), network
+                isolation, and cost-effective scaling.</span>
+            </li>
+          </ul>
+
+          <div class="flex flex-wrap gap-1.5 mt-5 pt-4 border-t border-slate-100 dark:border-slate-800">
+            <span
+              class="px-2 py-0.5 text-xs font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">AWS
+              EC2</span>
+            <span
+              class="px-2 py-0.5 text-xs font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Amazon
+              S3</span>
+            <span
+              class="px-2 py-0.5 text-xs font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Amazon
+              RDS</span>
+            <span
+              class="px-2 py-0.5 text-xs font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">AWS
+              VPC</span>
+            <span
+              class="px-2 py-0.5 text-xs font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">CloudFormation</span>
+            <span
+              class="px-2 py-0.5 text-xs font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">IAM</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       02. PROJECTS SECTION
+  ===================================================== -->
+  <section id="projects" class="py-16 sm:py-20 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+      <!-- Standard Section Header -->
+      <div class="mb-8 reveal-init">
+        <div
+          class="flex items-center gap-2 text-xs font-mono font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-wider mb-2">
+          <span>// 02. TECHNICAL PORTFOLIO</span>
+        </div>
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+              Featured Projects
+            </h2>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mt-2 max-w-2xl">
+              Production web applications, containerized services, machine learning models, and cryptographic tools.
+            </p>
+          </div>
+
+          <!-- Category Filter Tabs -->
+          <div class="flex flex-wrap items-center gap-1.5">
+            <button data-filter="all"
+              class="project-filter-btn px-3 py-1.5 rounded-md text-xs font-mono font-semibold transition-colors bg-brand-600 text-white shadow-sm">
+              All [6]
+            </button>
+            <button data-filter="fullstack"
+              class="project-filter-btn px-3 py-1.5 rounded-md text-xs font-mono font-semibold transition-colors bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:text-brand-600 dark:hover:text-brand-400">
+              Full-Stack
+            </button>
+            <button data-filter="ai"
+              class="project-filter-btn px-3 py-1.5 rounded-md text-xs font-mono font-semibold transition-colors bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:text-brand-600 dark:hover:text-brand-400">
+              AI / ML
+            </button>
+            <button data-filter="systems"
+              class="project-filter-btn px-3 py-1.5 rounded-md text-xs font-mono font-semibold transition-colors bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:text-brand-600 dark:hover:text-brand-400">
+              Systems
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects Grid (Uniform Formal Boxes) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Project 1: CureBuddy -->
+        <div class="project-card-item formal-box flex flex-col justify-between overflow-hidden group reveal-init"
+          data-category="fullstack">
+          <div>
+            <!-- Image Frame -->
+            <div
+              class="aspect-[16/10] overflow-hidden bg-slate-900 border-b border-slate-200 dark:border-slate-800 relative">
+              <img src="assets/curebuddy.PNG" alt="CureBuddy Healthcare Platform"
+                class="w-full h-full object-cover object-top group-hover:scale-102 transition-transform duration-300" />
+              <div class="absolute top-2.5 left-2.5">
+                <span class="px-2 py-0.5 text-[10px] font-mono font-semibold rounded bg-brand-600 text-white shadow-sm">
+                  Live Platform
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Body -->
+            <div class="p-5">
+              <span class="text-[11px] font-mono text-brand-600 dark:text-brand-400 uppercase tracking-wide block mb-1">
+                Full-Stack Healthcare
+              </span>
+              <h3
+                class="text-base font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+                CureBuddy — Healthcare Appointment System
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed line-clamp-3">
+                Role-based healthcare platform featuring OTP authentication, specialty search, and dynamic dashboards
+                for managing patient appointments and hospital workflows.
+              </p>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-1 mt-4">
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">ReactJS</span>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Node.js</span>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Express</span>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">MongoDB</span>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">JWT</span>
               </div>
             </div>
           </div>
+
+          <!-- Actions -->
+          <div
+            class="p-5 pt-0 flex items-center justify-between text-xs font-mono border-t border-slate-100 dark:border-slate-800/80">
+            <a href="https://cure-buddy.vercel.app/" target="_blank" rel="noopener noreferrer"
+              class="font-semibold text-brand-600 dark:text-brand-400 hover:underline inline-flex items-center gap-1">
+              <span>Live Demo</span>
+              <span>↗</span>
+            </a>
+            <a href="https://github.com/meSanika07" target="_blank" rel="noopener noreferrer"
+              class="text-slate-500 hover:text-slate-900 dark:hover:text-white inline-flex items-center gap-1">
+              <span>GitHub</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: SigmaGPT -->
+        <div class="project-card-item formal-box flex flex-col justify-between overflow-hidden group reveal-init"
+          data-category="ai fullstack">
+          <div>
+            <!-- Image Frame -->
+            <div
+              class="aspect-[16/10] overflow-hidden bg-slate-900 border-b border-slate-200 dark:border-slate-800 relative">
+              <img src="assets/cicd.webp" alt="SigmaGPT AI Chatbot with CI/CD"
+                class="w-full h-full object-cover object-top group-hover:scale-102 transition-transform duration-300" />
+              <div class="absolute top-2.5 left-2.5">
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono font-semibold rounded bg-slate-800 text-white shadow-sm border border-slate-700">
+                  AWS &amp; Docker
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Body -->
+            <div class="p-5">
+              <span class="text-[11px] font-mono text-brand-600 dark:text-brand-400 uppercase tracking-wide block mb-1">
+                AI &amp; Cloud DevOps
+              </span>
+              <h3
+                class="text-base font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+                SigmaGPT — AI Chatbot with CI/CD
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed line-clamp-3">
+                Containerized conversational AI system with automated GitHub Actions CI/CD pipeline, Nginx reverse
+                proxy, and AWS EC2 hosting.
+              </p>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-1 mt-4">
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">AWS
+                  EC2</span>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Docker</span>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">CI/CD</span>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">OpenAI</span>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">ReactJS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div
+            class="p-5 pt-0 flex items-center justify-between text-xs font-mono border-t border-slate-100 dark:border-slate-800/80">
+            <span class="text-slate-400">AWS Deployed</span>
+            <a href="https://github.com/meSanika07" target="_blank" rel="noopener noreferrer"
+              class="font-semibold text-brand-600 dark:text-brand-400 hover:underline inline-flex items-center gap-1">
+              <span>View Source</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3: Insurance Cost Prediction -->
+        <div class="project-card-item formal-box flex flex-col justify-between overflow-hidden group reveal-init"
+          data-category="ai">
+          <div>
+            <!-- Image Frame -->
+            <div
+              class="aspect-[16/10] overflow-hidden bg-slate-900 border-b border-slate-200 dark:border-slate-800 relative">
+              <img src="assets/medical insurance cost prediction.jpg" alt="Medical Insurance Cost Prediction"
+                class="w-full h-full object-cover object-top group-hover:scale-102 transition-transform duration-300" />
+              <div class="absolute top-2.5 left-2.5">
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono font-semibold rounded bg-slate-800 text-white shadow-sm border border-slate-700">
+                  ML &amp; Streamlit
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Body -->
+            <div class="p-5">
+              <span class="text-[11px] font-mono text-brand-600 dark:text-brand-400 uppercase tracking-wide block mb-1">
+                Predictive Analytics
+              </span>
+              <h3
+                class="text-base font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+                Medical Insurance Cost Prediction
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed line-clamp-3">
+                Machine learning model evaluating demographic and biometric indicators with Random Forest and Gradient
+                Boosting, served through a live Streamlit UI.
+              </p>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-1 mt-4">
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Python</span>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Random
+                  Forest</span>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Gradient
+                  Boost</span>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Streamlit</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div
+            class="p-5 pt-0 flex items-center justify-between text-xs font-mono border-t border-slate-100 dark:border-slate-800/80">
+            <span class="text-slate-400">Streamlit App</span>
+            <a href="https://github.com/meSanika07" target="_blank" rel="noopener noreferrer"
+              class="font-semibold text-brand-600 dark:text-brand-400 hover:underline inline-flex items-center gap-1">
+              <span>View Code</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4: File Encryptor / Decryptor Tool -->
+        <div class="project-card-item formal-box flex flex-col justify-between overflow-hidden group reveal-init"
+          data-category="systems">
+          <div>
+            <!-- Image Frame -->
+            <div
+              class="aspect-[16/10] overflow-hidden bg-slate-900 border-b border-slate-200 dark:border-slate-800 relative">
+              <img src="assets/file.png" alt="File Encryptor Tool in Java"
+                class="w-full h-full object-cover object-top group-hover:scale-102 transition-transform duration-300" />
+              <div class="absolute top-2.5 left-2.5">
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono font-semibold rounded bg-slate-800 text-white shadow-sm border border-slate-700">
+                  Java &amp; Security
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Body -->
+            <div class="p-5">
+              <span class="text-[11px] font-mono text-brand-600 dark:text-brand-400 uppercase tracking-wide block mb-1">
+                Desktop Utility
+              </span>
+              <h3
+                class="text-base font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+                File Encryptor / Decryptor Tool
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed line-clamp-3">
+                Java cryptographic utility implementing XOR cipher and SHA-256 hashing with a Swing GUI, strict file
+                verification, and byte-level stream processing.
+              </p>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-1 mt-4">
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Java</span>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Java
+                  Swing</span>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">SHA-256</span>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">XOR
+                  Cipher</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div
+            class="p-5 pt-0 flex items-center justify-between text-xs font-mono border-t border-slate-100 dark:border-slate-800/80">
+            <span class="text-slate-400">Desktop App</span>
+            <a href="https://github.com/meSanika07/File_Encrypt_Decrypt_Tool" target="_blank" rel="noopener noreferrer"
+              class="font-semibold text-brand-600 dark:text-brand-400 hover:underline inline-flex items-center gap-1">
+              <span>GitHub Repo</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 5: Real-Time Chat App -->
+        <div class="project-card-item formal-box flex flex-col justify-between overflow-hidden group reveal-init"
+          data-category="fullstack systems">
+          <div>
+            <!-- Image Frame -->
+            <div
+              class="aspect-[16/10] overflow-hidden bg-slate-900 border-b border-slate-200 dark:border-slate-800 relative">
+              <img src="assets/Chatapp.PNG" alt="Real-Time Room-Based Chat Application"
+                class="w-full h-full object-cover object-top group-hover:scale-102 transition-transform duration-300" />
+              <div class="absolute top-2.5 left-2.5">
+                <span class="px-2 py-0.5 text-[10px] font-mono font-semibold rounded bg-brand-600 text-white shadow-sm">
+                  Spring &amp; WebSockets
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Body -->
+            <div class="p-5">
+              <span class="text-[11px] font-mono text-brand-600 dark:text-brand-400 uppercase tracking-wide block mb-1">
+                Concurrency &amp; Sockets
+              </span>
+              <h3
+                class="text-base font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+                Real-Time Room-Based Chat App
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed line-clamp-3">
+                Sub-millisecond latency room messaging platform engineered with Spring Boot, WebSocket STOMP protocol,
+                MongoDB storage, and a React client.
+              </p>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-1 mt-4">
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Spring
+                  Boot</span>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">WebSocket</span>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">STOMP</span>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">MongoDB</span>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">ReactJS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div
+            class="p-5 pt-0 flex items-center justify-between text-xs font-mono border-t border-slate-100 dark:border-slate-800/80">
+            <span class="text-slate-400">Full-Stack App</span>
+            <a href="https://github.com/meSanika07" target="_blank" rel="noopener noreferrer"
+              class="font-semibold text-brand-600 dark:text-brand-400 hover:underline inline-flex items-center gap-1">
+              <span>View Source</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 6: Digital Portfolio -->
+        <div class="project-card-item formal-box flex flex-col justify-between overflow-hidden group reveal-init"
+          data-category="fullstack">
+          <div>
+            <!-- Image Frame -->
+            <div
+              class="aspect-[16/10] overflow-hidden bg-slate-900 border-b border-slate-200 dark:border-slate-800 relative">
+              <img src="assets/portfolio.PNG" alt="Digital Portfolio Redesign"
+                class="w-full h-full object-cover object-top group-hover:scale-102 transition-transform duration-300" />
+              <div class="absolute top-2.5 left-2.5">
+                <span class="px-2 py-0.5 text-[10px] font-mono font-semibold rounded bg-brand-600 text-white shadow-sm">
+                  Active Site
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Body -->
+            <div class="p-5">
+              <span class="text-[11px] font-mono text-brand-600 dark:text-brand-400 uppercase tracking-wide block mb-1">
+                Modern Web Design
+              </span>
+              <h3
+                class="text-base font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+                Engineer Portfolio Architecture
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed line-clamp-3">
+                High-performance portfolio redesigned with Tailwind CSS, clean semantic HTML5, accessible interactions,
+                lightweight animations, and dark/light mode.
+              </p>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-1 mt-4">
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">HTML5</span>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Tailwind
+                  CSS</span>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">JavaScript</span>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-surface-850 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Vercel</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div
+            class="p-5 pt-0 flex items-center justify-between text-xs font-mono border-t border-slate-100 dark:border-slate-800/80">
+            <a href="https://sanika-portfolio-iota.vercel.app/" target="_blank" rel="noopener noreferrer"
+              class="font-semibold text-brand-600 dark:text-brand-400 hover:underline inline-flex items-center gap-1">
+              <span>Live Site</span>
+              <span>↗</span>
+            </a>
+            <a href="https://github.com/meSanika07" target="_blank" rel="noopener noreferrer"
+              class="text-slate-500 hover:text-slate-900 dark:hover:text-white inline-flex items-center gap-1">
+              <span>GitHub</span>
+              <span>↗</span>
+            </a>
+          </div>
         </div>
 
       </div>
+
     </div>
   </section>
 
-  <div class="hr"></div>
 
   <!-- =====================================================
-     EDUCATION
-===================================================== -->
-  <section id="education">
-    <div class="wrap">
-      <div class="reveal" style="margin-bottom:3.5rem;text-align:center;">
-        <span class="sec-label">Academic Background</span>
-        <h2 class="sec-title">Education</h2>
-      </div>
+       03. TECHNICAL SKILLS SECTION
+  ===================================================== -->
+  <section id="skills" class="py-16 sm:py-20 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
 
-      <div class="edu-zigzag reveal">
-
-        <!-- Item 1 — LEFT -->
-        <div class="edu-zz-item edu-zz-left">
-          <div class="edu-zz-card">
-            <div class="edu-zz-period">Nov 2022 — June 2026</div>
-            <div class="edu-zz-degree">BTech — Computer Engineering</div>
-            <div class="edu-zz-school">MIT Academy of Engineering, Alandi</div>
-            <div class="edu-zz-detail">CGPA: 9.05 / 10</div>
-          </div>
-          <div class="edu-zz-center">
-            <div class="edu-zz-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                <path d="M6 12v5c3 3 9 3 12 0v-5" />
-              </svg>
-            </div>
-            <div class="edu-zz-line"></div>
-          </div>
-          <div class="edu-zz-empty"></div>
+      <!-- Standard Section Header -->
+      <div class="mb-10 sm:mb-12 reveal-init">
+        <div
+          class="flex items-center gap-2 text-xs font-mono font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-wider mb-2">
+          <span>// 03. CORE COMPETENCIES</span>
         </div>
-
-        <!-- Item 2 — RIGHT -->
-        <div class="edu-zz-item edu-zz-right">
-          <div class="edu-zz-empty"></div>
-          <div class="edu-zz-center">
-            <div class="edu-zz-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                <path d="M6 12v5c3 3 9 3 12 0v-5" />
-              </svg>
-            </div>
-            <div class="edu-zz-line"></div>
-          </div>
-          <div class="edu-zz-card">
-            <div class="edu-zz-period">2021 — 2022</div>
-            <div class="edu-zz-degree">H.S.C. — Plane Science</div>
-            <div class="edu-zz-school">Dnyansamwardhini Junior College, Satara</div>
-            <div class="edu-zz-detail">Grade: 83.17%</div>
-          </div>
-        </div>
-
-        <!-- Item 3 — LEFT -->
-        <div class="edu-zz-item edu-zz-left">
-          <div class="edu-zz-card">
-            <div class="edu-zz-period">2019 — 2020</div>
-            <div class="edu-zz-degree">S.S.C.</div>
-            <div class="edu-zz-school">Dnyansamwardhini Junior College, Satara</div>
-            <div class="edu-zz-detail">Grade: 95.40%</div>
-          </div>
-          <div class="edu-zz-center">
-            <div class="edu-zz-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                <path d="M6 12v5c3 3 9 3 12 0v-5" />
-              </svg>
-            </div>
-            <div class="edu-zz-line"></div>
-          </div>
-          <div class="edu-zz-empty"></div>
-        </div>
-
-      </div>
-    </div>
-
-  </section>
-
-  <div class="hr"></div>
-
-  <section id="skills">
-    <div class="wrap">
-
-      <div class="section-center reveal">
-        <span class="sec-label">Expertise</span>
-        <h2 class="sec-title">Technical Skills</h2>
-        <p class="sec-sub" style="margin:0 auto;text-align:center;">
-          Technologies I work with across the full stack.
-        </p>
-      </div>
-      <div class="sk3-list reveal">
-
-        <div class="sk3-row">
-          <span class="sk3-num">01</span>
-          <span class="sk3-title">Web Development</span>
-          <span class="sk3-tags"> HTML &nbsp;·&nbsp; CSS &nbsp;·&nbsp; JavaScript &nbsp;·&nbsp;React.js ·&nbsp; MySQL
-            &nbsp;·&nbsp; MongoDB &nbsp;·&nbsp; Spring Boot &nbsp;·&nbsp; Node.js &nbsp;·&nbsp; REST APIs &nbsp;·&nbsp;
-            WebSocket &nbsp;·&nbsp; </span>
-          <span class="sk3-arrow">↗</span>
-        </div>
-
-        <div class="sk3-row">
-          <span class="sk3-num">02</span>
-          <span class="sk3-title">AI / Machine Learning</span>
-          <span class="sk3-tags">Machine Learning &nbsp;·&nbsp; Random Forest &nbsp;·&nbsp; Gradient Boosting
-            &nbsp;·&nbsp; Linear Regression &nbsp;·&nbsp; EDA &nbsp;·&nbsp; Feature Engineering &nbsp;·&nbsp; Predictive
-            Modeling &nbsp;·&nbsp; Streamlit</span>
-          <span class="sk3-arrow">↗</span>
-        </div>
-
-        <div class="sk3-row">
-          <span class="sk3-num">03</span>
-          <span class="sk3-title">Problem Solving &amp; Tools</span>
-          <span class="sk3-tags">Java &nbsp;·&nbsp; Data Structures & Algorithms &nbsp;·&nbsp; OOP &nbsp;·&nbsp; DBMS
-            &nbsp;·&nbsp; Git / GitHub &nbsp;·&nbsp; Postman &nbsp;·&nbsp; IntelliJ IDEA &nbsp;·&nbsp; VS Code</span>
-          <span class="sk3-arrow">↗</span>
-        </div>
-
-      </div>
-
-    </div>
-    </div>
-  </section>
-
-  <div class="hr"></div>
-
-
-  <!-- =====================================================
-     EXPERIENCE
-===================================================== -->
-  <section id="experience">
-    <div class="wrap">
-      <div class="section-center reveal">
-        <span class="sec-label">Work History</span>
-        <h2 class="sec-title">My Experience</h2>
-        <p class="sec-sub">
-          Hands-on industry exposure building real-world products and gaining cloud expertise.
-        </p>
-      </div>
-
-      <!-- Existing Experience -->
-      <div class="exp-card reveal">
-        <div>
-          <div class="exp-role">Frontend Developer Intern (SIP)</div>
-          <div class="exp-company">SORTUS E-WASTE MANAGEMENT</div>
-          <div class="exp-mode">Remote</div>
-          <div class="exp-bullets">
-            <div class="exp-bullet">Developed a responsive e-waste management platform using ReactJS, TypeScript, and
-              Tailwind CSS.</div>
-            <div class="exp-bullet">Converted Figma designs into reusable UI components and implemented routing using
-              React Router.</div>
-            <div class="exp-bullet">Built role-based dashboards for individual, industry, and admin users.</div>
-            <div class="exp-bullet">Collaborated using GitHub and followed best practices for clean, scalable frontend
-              architecture.</div>
-            <div class="exp-bullet">Gained hands-on experience in real-world product development and debugging.</div>
-          </div>
-        </div>
-        <div class="exp-period">June 2025<br />—<br />July 2025</div>
-      </div>
-
-      <div class="exp-card reveal d2">
-        <div>
-          <div class="exp-role">Cloud Virtual Intern</div>
-          <div class="exp-company">AICTE (AWS Academy)</div>
-          <div class="exp-mode">Remote</div>
-
-          <div class="exp-bullets">
-            <div class="exp-bullet">
-              Gained hands-on experience with core AWS services including EC2, S3, RDS, and VPC for cloud infrastructure
-              management.
-            </div>
-            <div class="exp-bullet">
-              Implemented infrastructure automation using AWS CloudFormation to streamline deployment processes.
-            </div>
-            <div class="exp-bullet">
-              Developed understanding of cloud architecture, security practices, and cost optimization strategies.
-            </div>
-          </div>
-        </div>
-
-        <div class="exp-period">Oct 2024<br />—<br />Dec 2024</div>
-      </div>
-
-    </div>
-
-
-  </section>
-
-
-
-  <!-- =====================================================
-     PROJECTS
-===================================================== -->
-  <section id="projects">
-    <div class="wrap">
-
-      <div class="section-center reveal">
-        <span class="sec-label">My Work</span>
-        <h2 class="sec-title">Projects</h2>
-        <p class="sec-sub">
-          Some of the projects I have built using web development,
-          machine learning, cloud, and backend technologies.
-        </p>
-      </div>
-
-      <div class="works-grid">
-
-        <!-- Your Project Cards Here -->
-        <!-- Card 1 -->
-        <div class="work-card reveal d2">
-          <div class="work-preview">
-            <img src="assets/medical insurance cost prediction.jpg" alt="Insurance ML">
-          </div>
-          <div class="work-body">
-            <div class="work-title">Medical Insurance Cost Prediction</div>
-            <div class="work-desc">
-              Developed a machine learning model to predict medical insurance costs using features like age, BMI,
-              smoking
-              habits, and region. Implemented different models, evaluated using R², MSE, and MAE, and deployed using
-              Streamlit for real-time predictions. </div>
-            <div class="work-tags">
-              <span class="work-tag">Machine Learning</span>
-              <span class="work-tag">Gradient Boosting</span>
-              <span class="work-tag">Random Forest</span>
-              <span class="work-tag">Linear Regression</span>
-              <span class="work-tag">Streamlit</span>
-            </div>
-            <a href="https://github.com/sanika-kundekar" target="_blank" class="btn-check">Check</a>
-          </div>
-        </div>
-
-
-        <!-- Card 2 -->
-        <div class="work-card reveal d2">
-          <div class="work-preview">
-            <img src="assets/cicd.webp" alt="SigmaGPT">
-          </div>
-          <div class="work-body">
-            <div class="work-title">SigmaGPT — AI Chatbot</div>
-            <div class="work-desc">
-              Built and deployed an AI-powered chatbot using ReactJS, Node.js, MongoDB, and OpenAI API. Implemented
-              CI/CD
-              pipelines with GitHub Actions and deployed on AWS EC2 using Docker and Nginx for scalable access.
-            </div>
-            <div class="work-tags">
-              <span class="work-tag">AWS</span>
-              <span class="work-tag">Docker</span>
-              <span class="work-tag">CI/CD</span>
-              <span class="work-tag">OpenAI</span>
-            </div>
-            <!-- <a href="https://github.com/sanika-kundekar" target="_blank" class="btn-check">Check</a> -->
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="work-card reveal d3">
-          <div class="work-preview">
-            <img src="assets/curebuddy.PNG" alt="CureBuddy">
-          </div>
-          <div class="work-body">
-            <div class="work-title">CureBuddy — Appointment System</div>
-            <div class="work-desc">
-              Developed a role-based healthcare web application with OTP-based authentication and advanced doctor
-              search.
-              Designed intuitive dashboards to manage appointments, user profiles, and administrative workflows
-              efficiently.
-            </div>
-            <div class="work-tags">
-              <span class="work-tag">ReactJS</span>
-              <span class="work-tag">Node.js</span>
-              <span class="work-tag">Express</span>
-              <span class="work-tag">Tailwind CSS</span>
-              <span class="work-tag">MongoDB</span>
-              <span class="work-tag">JWT Authentication</span>
-            </div>
-            <a href="https://cure-buddy.vercel.app/" target="_blank" class="btn-check">Check</a>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="work-card reveal d1">
-          <div class="work-preview">
-            <img src="assets/file.png" alt="Encryptor">
-          </div>
-          <div class="work-body">
-            <div class="work-title">File Encryptor / Decryptor</div>
-            <div class="work-desc">
-              Developed a Java-based desktop application for secure file encryption and decryption using XOR and
-              SHA-256.
-              Built a user-friendly Swing GUI with secure file handling and validation.
-            </div>
-            <div class="work-tags">
-              <span class="work-tag">Java</span>
-              <span class="work-tag">Java Swing</span>
-              <span class="work-tag">SHA-256</span>
-              <span class="work-tag">XOR-Encryption</span>
-              <span class="work-tag">NetBeans IDE</span>
-            </div>
-            <a href="https://github.com/meSanika07/File_Encrypt_Decrypt_Tool" target="_blank"
-              class="btn-check">Check</a>
-          </div>
-        </div>
-
-        <div class="work-card reveal d1">
-          <div class="work-preview">
-            <img src="assets/Chatapp.PNG" alt="Chat App">
-          </div>
-          <div class="work-body">
-            <div class="work-title">Real-Time Room-Based Chat App</div>
-            <div class="work-desc">
-              Developed a real-time chat application using Spring Boot, WebSocket, MongoDB, and ReactJS with room-based
-              messaging and low-latency communication. Implemented REST APIs, persistent storage, and a responsive UI
-              with
-              real-time updates. </div>
-            <div class="work-tags">
-              <span class="work-tag">ReactJS</span>
-              <span class="work-tag">Dependency Injection</span>
-              <span class="work-tag">Spring Boot</span>
-              <span class="work-tag">WebSocket</span>
-              <span class="work-tag">STOMP</span>
-              <span class="work-tag">MongoDB</span>
-
-            </div>
-            <!-- <a href="https://github.com/sanika-kundekar" target="_blank" class="btn-check">Check</a> -->
-          </div>
-        </div>
-
-        <!-- Card 1 — Digital Portfolio -->
-        <div class="work-card reveal d1">
-          <div class="work-preview" style="padding:0;overflow:hidden;">
-            <img src="assets/portfolio.PNG" alt="Digital Portfolio"
-              style="width:100%;height:100%;object-fit:cover;object-position:top;filter:brightness(0.82) contrast(1.05);" />
-          </div>
-          <div class="work-body">
-            <div class="work-title">Digital Portfolio</div>
-            <div class="work-desc">My professional portfolio designed to showcase skills, experience, and projects in a
-              simple and organized way. Highlights web development work and problem-solving, making it easy for
-              professionals to connect for collaborations and new opportunities.</div>
-            <div class="work-tags">
-              <span class="work-tag">HTML</span>
-              <span class="work-tag">CSS</span>
-              <span class="work-tag">JavaScript</span>
-            </div>
-            <a href="https://sanika-portfolio-iota.vercel.app/" target="_blank" class="btn-check">Check</a>
-          </div>
-
-        </div>
-
-      </div>
-  </section>
-
-  <div class="hr"></div>
-
-<!-- =====================================================
-     CERTIFICATIONS
-===================================================== -->
-<section id="certs">
-  <div class="wrap">
-
-    <div class="section-center reveal">
-      <span class="sec-label">Certificate</span>
-      <h2 class="sec-title">Certificates &amp; Achievements</h2>
-      <p class="sec-sub">
-        Certifications, achievements, and research contributions showcasing
-        technical expertise and continuous learning.
-      </p>
-    </div>
-
-    <div class="certs-grid">
-
-      <!-- Postman Certificate -->
-      <div class="cert-card reveal d1">
-        <div class="cert-icon">1</div>
-
-        <div>
-          <div class="cert-title">
-            Postman API Fundamentals Student Expert
-          </div>
-
-          <div class="cert-issuer">
-            Postman — December 2024
-          </div>
-
-          <div class="cert-desc">
-            Gained expertise in API fundamentals including GET, POST,
-            PATCH, DELETE requests, query parameters,
-            and API Key Authorization.
-          </div>
-
-          <a href="assets/POSTMAN.jpg"
-             target="_blank"
-             class="verify-link">
-             Verify Certificate →
-          </a>
-        </div>
-      </div>
-
-      <!-- AWS Cloud Certificate -->
-      <div class="cert-card reveal d2">
-        <div class="cert-icon">2</div>
-
-        <div>
-          <div class="cert-title">
-            AWS Certified Cloud Practitioner
-          </div>
-
-          <div class="cert-issuer">
-            AWS — May 2026
-          </div>
-
-          <div class="cert-desc">
-            Certified in AWS Cloud fundamentals including EC2,
-            S3, IAM, VPC, cloud security, pricing,
-            and core AWS services.
-          </div>
-
-          <a href="assets/AWS Certified Cloud Practitioner certificate_page-0001 (1).jpg"
-             target="_blank"
-             class="verify-link">
-             Verify Certificate →
-          </a>
-        </div>
-      </div>
-
-      <!-- Research Paper -->
-      <div class="cert-card reveal d3">
-        <div class="cert-icon">3</div>
-
-        <div>
-          <div class="cert-title">
-            Stable Diffusion with LLM Prompt Engineering
-            and CLIP Filtering for Fine-Grained Image Generation
-          </div>
-
-          <div class="cert-issuer">
-            IEEE — ICMNWC 2025 (Dec 2025)
-          </div>
-
-          <div class="cert-desc">
-            Published a research paper proposing a diffusion-based framework
-            combining LLM-driven prompt diversification and CLIP-based
-            filtering to improve fine-grained image generation quality,
-            diversity, and class alignment.
-          </div>
-
-          <a href="https://ieeexplore.ieee.org/document/11354257"
-             target="_blank"
-             class="verify-link">
-             View Research Paper →
-          </a>
-        </div>
-      </div>
-
-      <!-- Full Stack Development Certificate -->
-      <div class="cert-card reveal d4">
-        <div class="cert-icon">4</div>
-
-        <div>
-          <div class="cert-title">
-            Super 30 Full Stack Development Program
-          </div>
-
-          <div class="cert-issuer">
-            MIT Academy of Engineering — August 2025
-          </div>
-
-          <div class="cert-desc">
-            Successfully completed a 200-hour Super 30 Training Program
-            focused on full-stack development, Java programming,
-            project building, version control, and deployment practices.
-          </div>
-
-          <a href="assets/Kundekar Sanika Baban Fullstack Development Certificate_page-0001.jpg"
-             target="_blank"
-             class="verify-link">
-             Verify Certificate →
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-  <div class="hr"></div>
-
-  <section id="contact">
-    <div class="wrap">
-      <div class="contact-head reveal">
-        <span class="sec-label">Get In Touch</span>
-        <h2 class="sec-title">Contact Me</h2>
-        <p class="sec-sub">
-          Open to internships, full-time roles, and collaborations. Feel free to reach out!
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+          Technical Skills
+        </h2>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mt-2 max-w-2xl">
+          Core technologies, frameworks, cloud services, and developer tooling utilized in production environments.
         </p>
       </div>
 
-      <div class="contact-gerold single">
+      <!-- Skills Grid (Uniform Formal Boxes with Blue Accent) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <!-- Only contact form -->
-        <form class="contact-form reveal d2" id="cForm" onsubmit="sendMsg(event)">
-          <div class="f-row">
-            <div class="f-field">
-              <label>First Name</label>
-              <input type="text" placeholder="First name" required />
-            </div>
-            <div class="f-field">
-              <label>Last Name</label>
-              <input type="text" placeholder="Last name" required />
-            </div>
+        <!-- Skills Box 1: Frontend Development -->
+        <div class="formal-box p-6 reveal-init">
+          <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100 dark:border-slate-800">
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">Frontend Engineering</h3>
+            <span class="text-xs font-mono text-brand-600 dark:text-brand-400 font-semibold">[UI/UX]</span>
           </div>
-
-          <div class="f-field">
-            <label>Email Address</label>
-            <input type="email" placeholder="Email address" required />
+          <div class="flex flex-wrap gap-1.5">
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">React
+              19</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">TypeScript</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">JavaScript
+              (ES6+)</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Tailwind
+              CSS</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">TanStack
+              Query</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">React
+              Hook Form</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">React
+              Router</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">MUI</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">HTML5
+              / CSS3</span>
           </div>
+        </div>
 
-          <div class="f-field">
-            <label>Message</label>
-            <textarea placeholder="Tell me about the opportunity or project..." required></textarea>
+        <!-- Skills Box 2: Backend & Microservices -->
+        <div class="formal-box p-6 reveal-init">
+          <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100 dark:border-slate-800">
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">Backend &amp; APIs</h3>
+            <span class="text-xs font-mono text-brand-600 dark:text-brand-400 font-semibold">[Node/REST]</span>
           </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Node.js</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Express
+              5</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">RESTful
+              APIs</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Socket.IO</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Spring
+              Boot</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Sequelize
+              ORM</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Postman</span>
+          </div>
+        </div>
 
-          <button type="submit" class="btn-send">Send Message</button>
-          <div id="formSuccess">✓ Message sent! I'll get back to you soon.</div>
-        </form>
+        <!-- Skills Box 3: Cloud & DevOps -->
+        <div class="formal-box p-6 reveal-init">
+          <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100 dark:border-slate-800">
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">Cloud &amp; DevOps</h3>
+            <span class="text-xs font-mono text-brand-600 dark:text-brand-400 font-semibold">[AWS/Infra]</span>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">AWS
+              (EC2, S3, RDS)</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">AWS
+              VPC &amp; IAM</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">CloudFormation</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Docker</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">CI/CD
+              (GitHub Actions)</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Nginx</span>
+          </div>
+        </div>
+
+        <!-- Skills Box 4: Databases & Storage -->
+        <div class="formal-box p-6 reveal-init">
+          <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100 dark:border-slate-800">
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">Databases &amp; Caching</h3>
+            <span class="text-xs font-mono text-brand-600 dark:text-brand-400 font-semibold">[SQL/NoSQL]</span>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">PostgreSQL</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Sequelize
+              ORM</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Redis</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">MongoDB</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">MySQL</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">AWS
+              RDS</span>
+          </div>
+        </div>
+
+        <!-- Skills Box 5: AI & Machine Learning -->
+        <div class="formal-box p-6 reveal-init">
+          <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100 dark:border-slate-800">
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">AI &amp; Machine Learning</h3>
+            <span class="text-xs font-mono text-brand-600 dark:text-brand-400 font-semibold">[Research/ML]</span>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Python</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Stable
+              Diffusion</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">LLM
+              Prompt Eng.</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">CLIP
+              Filtering</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Gradient
+              Boosting</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Random
+              Forest</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Streamlit</span>
+          </div>
+        </div>
+
+        <!-- Skills Box 6: Core CS & Tooling -->
+        <div class="formal-box p-6 reveal-init">
+          <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100 dark:border-slate-800">
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">Core CS &amp; Tooling</h3>
+            <span class="text-xs font-mono text-brand-600 dark:text-brand-400 font-semibold">[Foundation]</span>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Java</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Data
+              Structures &amp; Algorithms</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">OOP
+              &amp; DBMS</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Git
+              &amp; GitHub</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Bitbucket</span>
+            <span
+              class="px-2.5 py-1 text-xs rounded font-mono bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">VS
+              Code &amp; IntelliJ</span>
+          </div>
+        </div>
 
       </div>
+
     </div>
   </section>
 
+
   <!-- =====================================================
-     FOOTER
-===================================================== -->
-  <footer>
-    <div class="wrap">
-      <div class="footer-inner">
-        <div class="footer-logo">SK</div>
-        <ul class="footer-links">
-          <li><a href="#experience">Experience.</a></li>
-          <li><a href="#skills">Skills.</a></li>
-          <li><a href="#education">Education.</a></li>
-          <li><a href="#works">Projects</a></li>
-          <li><a href="#contact">Contact.</a></li>
-        </ul>
-        <div class="footer-copy">
-          © 2025 All Rights Reserved by
-          <span style="color:var(--purple-light)">Sanika Kundekar</span>
+       04. EDUCATION SECTION
+  ===================================================== -->
+  <section id="education" class="py-16 sm:py-20 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+      <!-- Standard Section Header -->
+      <div class="mb-10 sm:mb-12 reveal-init">
+        <div
+          class="flex items-center gap-2 text-xs font-mono font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-wider mb-2">
+          <span>// 04. ACADEMIC FOUNDATION</span>
         </div>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+          Education
+        </h2>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mt-2 max-w-2xl">
+          Formal engineering degree and science background in Computer Engineering and core mathematical fundamentals.
+        </p>
+      </div>
+
+      <!-- Education Cards -->
+      <div class="space-y-4 max-w-4xl">
+
+        <!-- Degree 1: B.Tech -->
+        <div class="formal-box p-6 reveal-init">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-2">
+            <div>
+              <span
+                class="px-2 py-0.5 text-xs font-mono font-semibold rounded bg-brand-50 dark:bg-brand-950/60 text-brand-700 dark:text-brand-300 border border-brand-200 dark:border-brand-800">
+                Undergraduate Degree
+              </span>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1.5">
+                BTech in Computer Engineering
+              </h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400">
+                MIT Academy of Engineering, Alandi (Pune)
+              </p>
+            </div>
+            <div class="text-xs font-mono text-slate-500 dark:text-slate-400 sm:text-right shrink-0">
+              Nov 2022 — June 2026
+            </div>
+          </div>
+          <p
+            class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-3 leading-relaxed border-t border-slate-100 dark:border-slate-800 pt-3">
+            Coursework: Data Structures &amp; Algorithms, Object-Oriented Programming (Java), Database Management
+            Systems, Operating Systems, Computer Networks, and Cloud Computing.
+          </p>
+        </div>
+
+        <!-- Degree 2: H.S.C. -->
+        <div class="formal-box p-5 reveal-init">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+            <div>
+              <span class="text-xs font-mono text-slate-400">Higher Secondary (Class XII)</span>
+              <h3 class="text-base font-bold text-slate-900 dark:text-white">
+                H.S.C. — Science Stream
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400">
+                Dnyansamwardhini Junior College, Satara
+              </p>
+            </div>
+            <div class="text-xs font-mono text-slate-500 dark:text-slate-400 sm:text-right shrink-0">
+              2021 — 2022
+            </div>
+          </div>
+        </div>
+
+        <!-- Degree 3: S.S.C. -->
+        <div class="formal-box p-5 reveal-init">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+            <div>
+              <span class="text-xs font-mono text-slate-400">Secondary School (Class X)</span>
+              <h3 class="text-base font-bold text-slate-900 dark:text-white">
+                S.S.C.
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400">
+                Dnyansamwardhini Junior College, Satara
+              </p>
+            </div>
+            <div class="text-xs font-mono text-slate-500 dark:text-slate-400 sm:text-right shrink-0">
+              2019 — 2020
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       05. CERTIFICATIONS & RESEARCH SECTION
+  ===================================================== -->
+  <section id="certs" class="py-16 sm:py-20 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+      <!-- Standard Section Header -->
+      <div class="mb-10 sm:mb-12 reveal-init">
+        <div
+          class="flex items-center gap-2 text-xs font-mono font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-wider mb-2">
+          <span>// 05. CREDENTIALS &amp; PUBLICATIONS</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+          Certifications &amp; Research
+        </h2>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mt-2 max-w-2xl">
+          Peer-reviewed international research paper and industry credentials verified by AWS, Postman, and MIT AOE.
+        </p>
+      </div>
+
+      <!-- Certifications Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Research Paper (Formal Box) -->
+        <div class="formal-box p-6 md:col-span-2 reveal-init">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-2">
+            <div>
+              <span
+                class="px-2 py-0.5 text-xs font-mono font-semibold rounded bg-brand-50 dark:bg-brand-950/60 text-brand-700 dark:text-brand-300 border border-brand-200 dark:border-brand-800">
+                IEEE Research Publication · ICMNWC 2025
+              </span>
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mt-1.5">
+                Stable Diffusion with LLM Prompt Engineering and CLIP Filtering for Fine-Grained Image Generation
+              </h3>
+              <p class="text-xs font-mono text-brand-600 dark:text-brand-400 mt-0.5">
+                IEEE International Conference (Dec 2025)
+              </p>
+            </div>
+            <div class="shrink-0">
+              <a href="https://ieeexplore.ieee.org/document/11354257" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-mono font-semibold bg-brand-600 text-white hover:bg-brand-700 transition-colors shadow-sm">
+                <span>IEEE Xplore</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+          <p
+            class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed mt-2 border-t border-slate-100 dark:border-slate-800 pt-3">
+            Published research proposing an integrated framework combining LLM-driven prompt diversification with
+            CLIP-based cosine metric filtering to elevate image fidelity and fine-grained visual alignment in diffusion
+            generation.
+          </p>
+        </div>
+
+        <!-- Cert 1: AWS Certified Cloud Practitioner -->
+        <div class="formal-box p-6 flex flex-col justify-between reveal-init">
+          <div>
+            <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-100 dark:border-slate-800">
+              <span class="text-xs font-mono text-brand-600 dark:text-brand-400 font-semibold">AWS ACADEMY</span>
+              <span class="text-xs font-mono text-slate-400">Dec 2024</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">
+              AWS Certified Cloud Practitioner
+            </h3>
+            <p class="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-0.5">
+              Amazon Web Services (AWS)
+            </p>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+              Certified in core AWS cloud concepts: EC2 compute, S3 storage, RDS databases, VPC networking, IAM
+              security, and cloud billing architectures.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800">
+            <button
+              class="view-cert-btn text-xs font-mono font-semibold text-brand-600 dark:text-brand-400 hover:underline inline-flex items-center gap-1"
+              data-title="AWS Certified Cloud Practitioner" data-issuer="Amazon Web Services (AWS)"
+              data-image="assets/AWS Certified Cloud Practitioner certificate_page-0001 (1).jpg"
+              data-link="assets/AWS Certified Cloud Practitioner.pdf" data-link-text="Open Credential PDF ↗">
+              <span>Preview Certificate</span>
+              <span>→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Cert 2: Postman API Student Expert -->
+        <div class="formal-box p-6 flex flex-col justify-between reveal-init">
+          <div>
+            <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-100 dark:border-slate-800">
+              <span class="text-xs font-mono text-brand-600 dark:text-brand-400 font-semibold">POSTMAN</span>
+              <span class="text-xs font-mono text-slate-400">Dec 2024</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">
+              Postman API Fundamentals Student Expert
+            </h3>
+            <p class="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-0.5">
+              Postman
+            </p>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+              Demonstrated mastery in REST API testing, authorization headers, payload validation, and automated request
+              sequences.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800">
+            <button
+              class="view-cert-btn text-xs font-mono font-semibold text-brand-600 dark:text-brand-400 hover:underline inline-flex items-center gap-1"
+              data-title="Postman API Fundamentals Student Expert" data-issuer="Postman — December 2024"
+              data-image="assets/POSTMAN.jpg" data-link="assets/POSTMAN.jpg" data-link-text="Open Certificate Image ↗">
+              <span>Preview Certificate</span>
+              <span>→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Cert 3: Super 30 Full Stack -->
+        <div class="formal-box p-6 md:col-span-2 flex flex-col justify-between reveal-init">
+          <div>
+            <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-100 dark:border-slate-800">
+              <span class="text-xs font-mono text-brand-600 dark:text-brand-400 font-semibold">MIT ACADEMY OF
+                ENGINEERING</span>
+              <span class="text-xs font-mono text-slate-400">August 2025</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">
+              Super 30 Full Stack Development Program
+            </h3>
+            <p class="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-0.5">
+              200-Hour Advanced Program · Java, Spring Boot, React &amp; Cloud
+            </p>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+              Intensive training program focused on enterprise Java, Spring Boot microservices, React development,
+              database query optimization, test-driven development, and Docker deployments.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800">
+            <button
+              class="view-cert-btn text-xs font-mono font-semibold text-brand-600 dark:text-brand-400 hover:underline inline-flex items-center gap-1"
+              data-title="Super 30 Full Stack Development Program"
+              data-issuer="MIT Academy of Engineering — August 2025"
+              data-image="assets/Kundekar Sanika Baban Fullstack Development Certificate_page-0001.jpg"
+              data-link="assets/Kundekar Sanika Baban Fullstack Development Certificate_page-0001.jpg"
+              data-link-text="Open Full Certificate Image ↗">
+              <span>Preview Certificate</span>
+              <span>→</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       06. CONTACT SECTION
+  ===================================================== -->
+  <section id="contact" class="py-16 sm:py-20 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+      <!-- Standard Section Header -->
+      <div class="mb-10 sm:mb-12 reveal-init">
+        <div
+          class="flex items-center gap-2 text-xs font-mono font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-wider mb-2">
+          <span>// 06. COMMUNICATION CHANNELS</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+          Contact Me
+        </h2>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mt-2 max-w-2xl">
+          Currently open to full-time engineering positions, SDE internships, and collaborative software projects.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+
+        <!-- Left: Quick Connect Box -->
+        <div class="lg:col-span-5 formal-box p-6 sm:p-7 reveal-init">
+          <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">
+            Let's connect directly.
+          </h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-5">
+            Reach out through direct email, phone, or professional platforms. I typically respond within 24 hours.
+          </p>
+
+          <!-- Contact Channels -->
+          <div class="space-y-3 mb-5">
+            <!-- Direct Email Box -->
+            <div class="p-3 rounded-md bg-slate-50 dark:bg-surface-850 border border-slate-200 dark:border-slate-800">
+              <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider block mb-0.5">Direct
+                Email</span>
+              <div class="flex items-center justify-between gap-2">
+                <a href="mailto:sanikakundekar007@gmail.com"
+                  class="font-mono text-xs font-semibold text-brand-600 dark:text-brand-400 truncate hover:underline">
+                  sanikakundekar007@gmail.com
+                </a>
+                <button
+                  class="copy-email-btn text-xs font-mono text-slate-500 hover:text-brand-600 shrink-0 p-1 rounded"
+                  data-email="sanikakundekar007@gmail.com" title="Copy email address">
+                  Copy
+                </button>
+              </div>
+            </div>
+
+            <!-- Direct Phone Box -->
+            <div class="p-3 rounded-md bg-slate-50 dark:bg-surface-850 border border-slate-200 dark:border-slate-800">
+              <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider block mb-0.5">Phone /
+                WhatsApp</span>
+              <div class="flex items-center justify-between gap-2">
+                <a href="tel:+919307951877"
+                  class="font-mono text-xs font-semibold text-brand-600 dark:text-brand-400 truncate hover:underline">
+                  +91 9307951877
+                </a>
+                <button
+                  class="copy-phone-btn text-xs font-mono text-slate-500 hover:text-brand-600 shrink-0 p-1 rounded"
+                  data-phone="+91 9307951877" title="Copy phone number">
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Profiles -->
+          <div class="pt-4 border-t border-slate-100 dark:border-slate-800">
+            <span class="text-[10px] font-mono uppercase tracking-wider text-slate-400 block mb-2.5">Professional
+              Networks</span>
+            <div class="flex flex-wrap gap-2 text-xs font-mono">
+              <a href="https://www.linkedin.com/in/sanika-kundekar-ab0447274" target="_blank" rel="noopener noreferrer"
+                class="px-2.5 py-1 rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 hover:text-brand-600 border border-slate-200 dark:border-slate-700">
+                LinkedIn ↗
+              </a>
+              <a href="https://github.com/meSanika07" target="_blank" rel="noopener noreferrer"
+                class="px-2.5 py-1 rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 hover:text-brand-600 border border-slate-200 dark:border-slate-700">
+                GitHub ↗
+              </a>
+              <a href="https://leetcode.com/u/mesanika_17/" target="_blank" rel="noopener noreferrer"
+                class="px-2.5 py-1 rounded bg-slate-100 dark:bg-surface-850 text-slate-700 dark:text-slate-300 hover:text-brand-600 border border-slate-200 dark:border-slate-700">
+                LeetCode ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Message Form -->
+        <div class="lg:col-span-7 formal-box p-6 sm:p-7 reveal-init">
+          <form id="contactForm" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="formName"
+                  class="block text-xs font-mono font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">
+                  Name *
+                </label>
+                <input type="text" id="formName" required placeholder="Your Name"
+                  class="w-full px-3.5 py-2 rounded-md text-xs sm:text-sm bg-slate-50 dark:bg-surface-850 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-brand-500 focus:border-brand-500 transition-colors" />
+              </div>
+              <div>
+                <label for="formEmail"
+                  class="block text-xs font-mono font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">
+                  Email Address *
+                </label>
+                <input type="email" id="formEmail" required placeholder="your.email@example.com"
+                  class="w-full px-3.5 py-2 rounded-md text-xs sm:text-sm bg-slate-50 dark:bg-surface-850 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-brand-500 focus:border-brand-500 transition-colors" />
+              </div>
+            </div>
+
+            <div>
+              <label for="formSubject"
+                class="block text-xs font-mono font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">
+                Subject
+              </label>
+              <input type="text" id="formSubject" placeholder="Software Engineering Opportunity / Project Inquiry"
+                class="w-full px-3.5 py-2 rounded-md text-xs sm:text-sm bg-slate-50 dark:bg-surface-850 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-brand-500 focus:border-brand-500 transition-colors" />
+            </div>
+
+            <div>
+              <label for="formMessage"
+                class="block text-xs font-mono font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">
+                Message *
+              </label>
+              <textarea id="formMessage" required rows="4" placeholder="Hello Sanika, I would like to discuss..."
+                class="w-full px-3.5 py-2 rounded-md text-xs sm:text-sm bg-slate-50 dark:bg-surface-850 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-brand-500 focus:border-brand-500 transition-colors resize-none"></textarea>
+            </div>
+
+            <button type="submit" id="formSubmitBtn"
+              class="px-5 py-2.5 rounded-md font-semibold text-xs sm:text-sm text-white bg-brand-600 hover:bg-brand-700 transition-colors shadow-sm flex items-center justify-center gap-1.5">
+              <span>Send Message</span>
+              <span>→</span>
+            </button>
+
+            <!-- Success Alert -->
+            <div id="formSuccessAlert"
+              class="hidden p-3 rounded-md bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 text-xs font-medium">
+              ✓ Message prepared and sent! Thank you for getting in touch.
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       FOOTER
+  ===================================================== -->
+  <footer class="py-10 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-surface-950">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+
+        <!-- Brand -->
+        <div class="flex items-center gap-2">
+          <div
+            class="w-6 h-6 rounded bg-brand-600 text-white flex items-center justify-center font-mono font-bold text-[10px]">
+            SK
+          </div>
+          <span class="text-xs font-semibold text-slate-800 dark:text-slate-200">
+            Sanika Kundekar
+          </span>
+        </div>
+
+        <!-- Links -->
+        <div class="flex items-center gap-4 text-xs font-mono text-slate-500 dark:text-slate-400">
+          <a href="#experience" class="hover:text-brand-600 dark:hover:text-brand-400">Experience</a>
+          <a href="#projects" class="hover:text-brand-600 dark:hover:text-brand-400">Projects</a>
+          <a href="#skills" class="hover:text-brand-600 dark:hover:text-brand-400">Skills</a>
+          <a href="#contact" class="hover:text-brand-600 dark:hover:text-brand-400">Contact</a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-xs font-mono text-slate-400">
+          © 2026 Sanika Kundekar
+        </div>
+
       </div>
     </div>
   </footer>
 
-  <!-- JavaScript — loaded at bottom so DOM is ready -->
+
+  <!-- =====================================================
+       MODAL LIGHTBOX FOR CERTIFICATES
+  ===================================================== -->
+  <div id="modalBackdrop"
+    class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/75 backdrop-blur-sm transition-opacity">
+    <div id="modalContent"
+      class="bg-white dark:bg-surface-900 border border-slate-200 dark:border-slate-800 rounded-lg max-w-2xl w-full p-5 shadow-2xl relative max-h-[90vh] flex flex-col">
+
+      <!-- Close Button -->
+      <button id="modalCloseBtn" aria-label="Close modal"
+        class="absolute top-4 right-4 p-1.5 rounded-md text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-surface-850 transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="mb-3 pr-8">
+        <h4 id="modalTitle" class="text-base font-bold font-display text-slate-900 dark:text-white">Certification</h4>
+        <p id="modalIssuer" class="text-xs font-mono text-brand-600 dark:text-brand-400 mt-0.5"></p>
+      </div>
+
+      <!-- Modal Image Body -->
+      <div
+        class="flex-1 overflow-auto rounded bg-slate-950 flex items-center justify-center p-2 mb-3 border border-slate-200 dark:border-slate-800">
+        <img id="modalImage" src="" alt="Certificate Preview" class="max-h-[60vh] max-w-full object-contain rounded" />
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="flex items-center justify-between pt-1">
+        <span class="text-xs text-slate-400 font-mono">Verified Credential</span>
+        <a id="modalLink" href="#" target="_blank" rel="noopener noreferrer"
+          class="px-3 py-1.5 rounded-md text-xs font-mono font-semibold bg-brand-600 text-white hover:bg-brand-700 transition-colors inline-flex items-center gap-1 shadow-sm">
+          <span>Open Document</span>
+          <span>↗</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- =====================================================
+       TOAST NOTIFICATION (Email Copied, etc.)
+  ===================================================== -->
+  <div id="toast"
+    class="formal-box px-3.5 py-2.5 shadow-xl flex items-center gap-2 text-xs font-medium text-slate-800 dark:text-slate-100">
+    <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+    </svg>
+    <span id="toastMessage">Email copied to clipboard!</span>
+  </div>
+
+
+  <!-- =====================================================
+       BACK TO TOP BUTTON
+  ===================================================== -->
+  <a href="#hero" id="backToTopBtn" aria-label="Back to top"
+    class="fixed bottom-6 right-6 z-40 p-2.5 rounded-md bg-white dark:bg-surface-850 text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 border border-slate-200 dark:border-slate-800 shadow-md transition-all opacity-0 pointer-events-none translate-y-4 focus:outline-none">
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </a>
+
+
+  <!-- Main JavaScript File -->
   <script src="js/main.js"></script>
 
 </body>

@@ -1,0 +1,294 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =====================================================
+   SANIKA KUNDEKAR — SOFTWARE ENGINEER PORTFOLIO
+   Custom Design System & Modern UI Enhancements
+===================================================== */
+
+/* ── CUSTOM PROPERTIES ──────────────────────────────── */
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── BASE HTML & BODY ──────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  transition: background-color 0.3s var(--ease-smooth), color 0.3s var(--ease-smooth);
+}
+
+/* ── MODERN SUBTLE BACKGROUND GRID ─────────────────── */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image:
+    linear-gradient(to right, rgba(148, 163, 184, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.05) 1px, transparent 1px);
+}
+
+.dark .bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+}
+
+/* ── CUSTOM SCROLLBAR ──────────────────────────────── */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(37, 99, 235, 0.5);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.5);
+}
+
+/* ── SELECTION COLOR ───────────────────────────────── */
+::selection {
+  background-color: rgba(37, 99, 235, 0.2);
+  color: #1d4ed8;
+}
+
+.dark ::selection {
+  background-color: rgba(59, 130, 246, 0.3);
+  color: #93c5fd;
+}
+
+/* ── FORMAL BOX CARD SURFACES ──────────────────────── */
+.formal-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.dark .formal-box {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 0.5rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.formal-box:hover {
+  border-color: #2563eb;
+  box-shadow: 0 4px 14px -2px rgba(37, 99, 235, 0.08);
+}
+
+.dark .formal-box:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 4px 16px -2px rgba(59, 130, 246, 0.12);
+}
+
+.glass-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.dark .glass-card {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 0.5rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.glass-card:hover {
+  border-color: #2563eb;
+  box-shadow: 0 4px 14px -2px rgba(37, 99, 235, 0.08);
+}
+
+.dark .glass-card:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 4px 16px -2px rgba(59, 130, 246, 0.12);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.dark .glass-panel {
+  background: rgba(10, 15, 29, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid #1e293b;
+}
+
+/* ── ANIMATED PULSE DOT ────────────────────────────── */
+@keyframes pulseDot {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 7px rgba(16, 185, 129, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  animation: pulseDot 2s infinite;
+  display: inline-block;
+}
+
+/* ── SCROLL REVEAL ANIMATIONS ──────────────────────── */
+/* Graceful entrance animation; default visible so content is NEVER hidden if JS is slow */
+.reveal-init {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.3s var(--ease-smooth), transform 0.3s var(--ease-smooth);
+}
+
+.js-motion .reveal-init:not(.revealed) {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.js-motion .reveal-init.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── TOAST NOTIFICATION ────────────────────────────── */
+#toast {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 99999;
+  transform: translateY(120%);
+  opacity: 0;
+  transition: all 0.3s var(--ease-spring);
+  pointer-events: none;
+}
+
+#toast.show {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ── MODAL STYLES ──────────────────────────────────── */
+#modalBackdrop {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+#modalBackdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modalContent {
+  transform: scale(0.96) translateY(12px);
+  opacity: 0;
+  transition: all 0.25s var(--ease-spring);
+}
+
+#modalBackdrop.open #modalContent {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+/* ── NAVLINK INDICATOR ─────────────────────────────── */
+.nav-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: #2563eb;
+  transition: width 0.25s var(--ease-smooth), left 0.25s var(--ease-smooth);
+}
+
+.dark .nav-link::after {
+  background: #60a5fa;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.nav-link.active {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.dark .nav-link.active {
+  color: #93c5fd;
+}
+
+/* ── PRINT FRIENDLY ────────────────────────────────── */
+@media print {
+
+  #navbar,
+  #themeBtn,
+  #cForm,
+  #toast,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  .glass-card,
+  .glass-panel {
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+  }
+}
