@@ -43,7 +43,7 @@ sanika-portfolio/
 │   ├── df50e5d3a4ac4651977404a03c31bcff_doubao-seedream-4-5-251128.png
 │   ├── file.png
 │   ├── Kundekar Sanika Baban Fullstack Development Certificate_page-0001.jpg
-│   ├── Kundekar_Sanika.pdf   # Latest verified resume
+│   ├── Sanika_Kundekar_Resume.pdf  # Latest verified resume
 │   ├── medical insurance cost prediction.jpg
 │   ├── portfolio.PNG
 │   ├── POSTMAN.jpg
